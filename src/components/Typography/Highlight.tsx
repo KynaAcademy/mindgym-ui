@@ -1,4 +1,5 @@
-import { ComponentPropsWithoutRef, FunctionComponent, ReactNode } from "react";
+import { FunctionComponent, ReactNode } from "react";
+import "/src/main.css";
 
 export type HighlightProps = {
   children: ReactNode;

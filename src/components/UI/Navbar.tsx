@@ -3,6 +3,7 @@ import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { classNames } from "../../lib/utils/classNames";
 import { Logo, HLogoPre } from "../Branding/Logo";
+import "/src/main.css";
 
 type NavbarLink = {
   href: string;

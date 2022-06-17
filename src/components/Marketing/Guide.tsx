@@ -1,6 +1,7 @@
 import { FunctionComponent, ReactNode } from "react";
 import useMode from "../../hooks/useMode";
 import { classNames } from "../../lib/utils/classNames";
+import "/src/main.css";
 
 type BullitType = "numbers" | "checks" | ReactNode;
 
