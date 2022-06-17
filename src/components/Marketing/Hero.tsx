@@ -37,13 +37,18 @@ export const Hero: FunctionComponent<HeroProps> = ({
         <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
           <div className="absolute inset-0">
             {image && (
-              <img
-                className="h-full w-full object-cover"
-                src={image}
-                alt={imageAlt || "background image"}
-              />
+              <>
+                <img
+                  className="h-full w-full object-cover"
+                  src={image}
+                  alt={imageAlt || "background image"}
+                />
+                <div className="absolute inset-0 bg-slate-800 opacity-60 mix-blend-multiply" />
+              </>
             )}
-            <div className="absolute inset-0 bg-slate-800 mix-blend-multiply" />
+            {!image && (
+              <div className="absolute inset-0 bg-slate-800 mix-blend-multiply" />
+            )}
           </div>
           {header && (
             <div className="z-50 relative px-4 py-4 -mb-16">{header}</div>

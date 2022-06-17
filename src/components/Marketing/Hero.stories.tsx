@@ -68,7 +68,7 @@ export const WithImage = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 WithImage.args = {
   image:
-    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3870&q=80&sat=-100",
+    "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3870&q=80",
 };
 
 export const WithSecondaryCTA = Template.bind({});
