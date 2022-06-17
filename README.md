@@ -18,6 +18,10 @@ export function App() {
 }
 ```
 
+## Documentation
+
+Check out the [live documentation with examples](https://62abf4f085bb45dc2ec9506c-cywkhuyjto.chromatic.com/).
+
 ## Develop
 
 - Clone the repo
