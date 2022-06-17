@@ -1,8 +1,35 @@
 import { Meta } from "@storybook/addon-docs";
+import "/src/main.css";
+import { Highlight } from "./Highlight";
 
 <Meta title="Typography/introduction" />
 
-<div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{" "}
-  <code>stories/Introduction.stories.mdx</code>
-</div>
+# Typography
+
+This is a bit on Typography.
+
+Please check out the examples in this section.
+
+## Highlight
+
+😌 This is just some text, but you can <Highlight>highlight</Highlight> anything of importance! Maybe <Highlight>new terminology</Highlight> to learn, or key concepts.
+
+```tsx
+import { Highlight } from "@mindgym/ui";
+
+<p>
+  This is just some text, but you can <Highlight>highlight</Highlight> anything
+  of importance!
+</p>;
+```
+
+👆 You can also <Highlight primary>highlight</Highlight> things with the primary color! You know, like things to <Highlight primary>remember</Highlight>.
+
+```tsx
+import { Highlight } from "@mindgym/ui";
+
+<p>
+  This is just some text, but you can <Highlight primary>highlight</Highlight>{" "}
+  anything of importance!
+</p>;
+```
