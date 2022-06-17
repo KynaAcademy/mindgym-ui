@@ -11,6 +11,7 @@
     "start": "parcel",
     "build": "parcel build",
     "check": "tsc --noEmit",
+    "test": "test-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -35,6 +36,7 @@
     "@storybook/builder-webpack4": "^6.5.9",
     "@storybook/manager-webpack4": "^6.5.9",
     "@storybook/react": "^6.5.9",
+    "@storybook/test-runner": "^0.1.1",
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.9",
     "@types/react": "^18.0.14",
@@ -43,6 +45,7 @@
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "chromatic": "^6.5.6",
+    "jest": "27",
     "parcel": "^2.6.0",
     "postcss": "^8.4.14",
     "process": "^0.11.10",
