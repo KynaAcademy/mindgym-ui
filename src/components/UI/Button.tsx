@@ -48,9 +48,9 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
     size === "small" ? "px-3 py-2 sm:px-4 text-xs" : "",
     !primary && !secondary ? "text-slate-700 bg-white hover:bg-slate-100" : "",
     secondary
-      ? "text-slate-900 tracking-tight bg-pink-600 hover:bg-pink-700"
+      ? "rounded text-white tracking-tight bg-pink-600 hover:bg-pink-200"
       : "",
-    primary ? "text-slate-900 tracking-tight bg-lime-400 hover:bg-lime-500" : ""
+    primary ? "rounded text-slate-800 tracking-tight bg-lime-600 hover:bg-lime-200" : ""
   );
 
   if (href) {
