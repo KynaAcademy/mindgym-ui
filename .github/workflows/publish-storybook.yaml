@@ -13,6 +13,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
+      - name: Retrieve Node Modules Cache
+        uses: actions/cache@v1
+        id: node_modules-cache # id to use in retrieve action
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package.json')) }}
       - run: yarn
         #👇 Adds Chromatic as a step in the workflow
       - uses: chromaui/action@v1
