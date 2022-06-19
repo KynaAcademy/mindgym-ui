@@ -6,6 +6,12 @@ import { Button } from "./Button";
 export default {
   title: "UI/Button",
   component: Button,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/vUURdvzTa19j0rTvTGfcwM/Untitled?node-id=11%3A4',
+    }
+  }
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   // argTypes: {
   //   backgroundColor: { control: "color" },
