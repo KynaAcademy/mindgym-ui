@@ -4,12 +4,12 @@ import useMode from "../../hooks/useMode";
 type SVGProps = {
   mono?: boolean;
   className?: string;
-  onDarkBackground?: boolean;
+  darkBackground?: boolean;
 };
 
 export const Logo: FunctionComponent<SVGProps> = ({
   mono,
-  onDarkBackground,
+  darkBackground,
   ...props
 }: SVGProps) => {
   const mode = useMode();
@@ -18,7 +18,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
       viewBox="0 0 989.69 437.93"
       fill="none"
       {...props}
-      aria-labeledby="LogoTitleId"
+      aria-labelledby="LogoTitleId"
     >
       <title id="LogoTitleID">Mindgym</title>
       <circle
@@ -49,7 +49,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -60,7 +60,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -71,7 +71,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -82,7 +82,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -93,7 +93,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -104,7 +104,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -115,7 +115,7 @@ export const Logo: FunctionComponent<SVGProps> = ({
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -125,14 +125,14 @@ export const Logo: FunctionComponent<SVGProps> = ({
   );
 };
 
-export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
+export const HLogo = ({ mono, darkBackground, ...props }: SVGProps) => {
   const mode = useMode();
   return (
     <svg
       viewBox="0 0 974.81 134.58"
       fill="none"
       {...props}
-      aria-labeledby="HLogoTitleId"
+      aria-labelledby="HLogoTitleId"
     >
       <title id="HLogoTitleID">Mindgym</title>
       <circle
@@ -162,7 +162,7 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -173,7 +173,7 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -184,7 +184,7 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -195,7 +195,7 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -206,7 +206,7 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -217,7 +217,7 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -228,7 +228,7 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -238,14 +238,14 @@ export const HLogo = ({ mono, onDarkBackground, ...props }: SVGProps) => {
   );
 };
 
-export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
+export const HLogoPre = ({ mono, darkBackground, ...props }: SVGProps) => {
   const mode = useMode();
   return (
     <svg
       viewBox="0 0 839.81 228.3"
       fill="none"
       {...props}
-      aria-labeledby="HLogoPreTitleId"
+      aria-labelledby="HLogoPreTitleId"
     >
       <title id="HLogoPreTitleID">Mindgym</title>
       <circle
@@ -278,7 +278,7 @@ export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -289,7 +289,7 @@ export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -300,7 +300,7 @@ export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -311,7 +311,7 @@ export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -322,7 +322,7 @@ export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -333,7 +333,7 @@ export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }
@@ -344,7 +344,7 @@ export const HLogoPre = ({ mono, onDarkBackground, ...props }: SVGProps) => {
           fill={
             mono
               ? "currentcolor"
-              : onDarkBackground
+              : darkBackground
               ? "#ffffff"
               : mode("#000", "currentcolor")
           }

@@ -1,5 +1,4 @@
 import { FunctionComponent, ReactNode } from "react";
-import "/src/main.css";
 
 export type HighlightProps = {
   primary?: boolean;
@@ -11,12 +10,12 @@ export const Highlight: FunctionComponent<HighlightProps> = ({
   primary,
 }) => {
   return (
-    <div className="relative inline-block px-2 pt-16 pb-20 -mx-2 -mt-16 -mb-20">
-      <div className="absolute inset-0">
+    <div tw="relative inline-block px-2 pt-16 pb-20 -mx-2 -mt-16 -mb-20">
+      <div tw="absolute inset-0">
         {primary ? (
-          <PrimaryHighlightSVG className="-my-2" />
+          <PrimaryHighlightSVG tw="-my-2" />
         ) : (
-          <HighLightSVG className="-my-2" />
+          <HighLightSVG tw="-my-2" />
         )}
       </div>
       {children}

@@ -2,12 +2,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { createContext, ReactNode, useEffect, useState } from "react";
-import { TailwindColorValue } from "tailwindcss/tailwind-config";
-
-export type ColorScheme = TailwindColorValue;
 
 type ThemeProviderProps = {
-  colorScheme?: ColorScheme;
+  colorScheme?: any;
   children: ReactNode;
 };
 
@@ -20,7 +17,7 @@ const defaultReset = () => initialUIMode;
 
 export type ThemeContext = {
   mode: UIMode;
-  colorScheme: ColorScheme;
+  colorScheme: any;
   resolvedMode: "light" | "dark";
   overrideMode: (mode: UIMode) => void;
   resetMode: () => void;
@@ -28,7 +25,7 @@ export type ThemeContext = {
 
 const Theme = createContext<ThemeContext>({
   mode: "os",
-  colorScheme: "teal",
+  colorScheme: "lime",
   resolvedMode: "light",
   overrideMode: defaultOverride,
   resetMode: defaultReset,
@@ -76,7 +73,7 @@ const ThemeProvider = ({ children, colorScheme }: ThemeProviderProps) => {
     <Theme.Provider
       value={{
         mode: modeState,
-        colorScheme: colorScheme || "teal",
+        colorScheme: colorScheme || "lime",
         resolvedMode: resolveMode(),
         overrideMode,
         resetMode,
