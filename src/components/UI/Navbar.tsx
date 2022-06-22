@@ -1,9 +1,9 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { classNames } from "../../lib/utils/classNames";
+import tw, { styled } from "twin.macro";
 import { Logo, HLogoPre } from "../Branding/Logo";
-import "/src/main.css";
+import useMode from "../../hooks/useMode";
 
 type NavbarLink = {
   href: string;
@@ -11,117 +11,134 @@ type NavbarLink = {
   active?: boolean;
 };
 
-export type NavbarProps = {
-  onDarkBackground?: boolean;
-  transparent?: boolean;
-  links: NavbarLink[];
+type NavbarLinkProps = {
+  darkBackground?: boolean;
+  current?: boolean;
 };
 
+type NavWrapperProps = {
+  transparent?: boolean;
+};
+
+export type NavbarProps = {
+  links: NavbarLink[];
+  darkBackground?: boolean;
+  transparent?: boolean;
+};
+
+const NavbarLinkElement = styled.a(
+  ({ current, darkBackground }: NavbarLinkProps) => [
+    tw`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase`,
+    current && darkBackground && tw`border-lime text-white`,
+    current && !darkBackground && tw`border-lime text-gray-900`,
+    !darkBackground &&
+      !current &&
+      tw`border-transparent hover:border-gray-300 text-gray-500 hover:text-gray-700`,
+    darkBackground &&
+      !current &&
+      tw`text-gray-200 hover:text-gray-100 border-transparent hover:border-gray-300`,
+  ]
+);
+
+const NavWrapper = styled.div<NavWrapperProps>(({ transparent }) => [
+  transparent ? "" : "bg-white shadow",
+]);
+
 export const Navbar: FunctionComponent<NavbarProps> = ({
-  onDarkBackground,
+  darkBackground,
   transparent,
   links,
 }) => {
+  const mode = useMode();
   return (
-    <Disclosure
-      as="nav"
-      className={classNames(transparent ? "" : "bg-white shadow")}
-    >
-      {({ open }) => (
-        <>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex">
-                <div className="flex-shrink-0 flex items-center">
-                  <HLogoPre
-                    onDarkBackground={onDarkBackground}
-                    className="block lg:hidden h-8 w-auto"
-                  />
-                  <Logo
-                    onDarkBackground={onDarkBackground}
-                    className="hidden lg:block h-8 w-auto"
-                  />
-                </div>
-                <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                  {links.map(({ href, label, active }) => {
-                    const current = active || window.location.pathname === href;
+    <NavWrapper {...{ transparent }}>
+      <Disclosure as="nav">
+        {({ open }) => (
+          <>
+            <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div tw="flex justify-between h-16">
+                <div tw="flex">
+                  <div tw="flex-shrink-0 flex items-center">
+                    <HLogoPre
+                      darkBackground={mode(darkBackground, true)}
+                      tw="block lg:hidden h-8 w-auto"
+                    />
+                    <Logo
+                      darkBackground={mode(darkBackground, true)}
+                      tw="hidden lg:block h-8 w-auto"
+                    />
+                  </div>
+                  <div tw="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    {links.map(({ href, label, active }) => {
+                      const current =
+                        active || window.location.pathname === href;
 
-                    return (
-                      <a
-                        key={href}
-                        href={href}
-                        className={classNames(
-                          "inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase",
-                          current && onDarkBackground
-                            ? "border-lime-400 text-white"
-                            : "",
-                          current && !onDarkBackground
-                            ? "border-lime-400 text-gray-900"
-                            : "",
-                          !onDarkBackground && !current
-                            ? "border-transparent hover:border-gray-300 text-gray-500 hover:text-gray-700"
-                            : "",
-                          onDarkBackground && !current
-                            ? "text-gray-200 hover:text-gray-100 border-transparent hover:border-gray-300"
-                            : ""
-                        )}
-                      >
-                        {label}
-                      </a>
-                    );
-                  })}
+                      return (
+                        <NavbarLinkElement
+                          key={label}
+                          {...{
+                            current,
+                            darkBackground: mode(darkBackground, true),
+                            href,
+                          }}
+                        >
+                          {label}
+                        </NavbarLinkElement>
+                      );
+                    })}
+                  </div>
+                </div>
+                <div tw="-mr-2 flex items-center sm:hidden">
+                  {/* Mobile menu button */}
+                  <Disclosure.Button tw="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime">
+                    <span tw="sr-only">Open main menu</span>
+                    {open ? (
+                      <XIcon tw="block h-6 w-6" aria-hidden="true" />
+                    ) : (
+                      <MenuIcon tw="block h-6 w-6" aria-hidden="true" />
+                    )}
+                  </Disclosure.Button>
                 </div>
               </div>
-              <div className="-mr-2 flex items-center sm:hidden">
-                {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-500">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
-                  ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                  )}
+            </div>
+
+            <Disclosure.Panel tw="sm:hidden">
+              <div tw="pt-2 pb-3 space-y-1">
+                {/* Current: "bg-lime-50 border-lime-400 text-lime-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  tw="bg-lime-200 border-lime text-lime block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                >
+                  Dashboard
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                >
+                  Team
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                >
+                  Projects
+                </Disclosure.Button>
+                <Disclosure.Button
+                  as="a"
+                  href="#"
+                  tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                >
+                  Calendar
                 </Disclosure.Button>
               </div>
-            </div>
-          </div>
-
-          <Disclosure.Panel className="sm:hidden">
-            <div className="pt-2 pb-3 space-y-1">
-              {/* Current: "bg-lime-50 border-lime-400 text-lime-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="bg-lime-50 border-lime-400 text-lime-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >
-                Dashboard
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >
-                Team
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >
-                Projects
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-              >
-                Calendar
-              </Disclosure.Button>
-            </div>
-          </Disclosure.Panel>
-        </>
-      )}
-    </Disclosure>
+            </Disclosure.Panel>
+          </>
+        )}
+      </Disclosure>
+    </NavWrapper>
   );
 };
 
