@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import tw, { styled } from "twin.macro";
 import useMode from "../../hooks/useMode";
 
 type SVGProps = {
@@ -7,7 +8,24 @@ type SVGProps = {
   darkBackground?: boolean;
 };
 
-export const Logo: FunctionComponent<SVGProps> = ({
+export type LogoProps = {
+  variant?: "horizontal" | "pre-horizontal" | "dots" | "default";
+} & SVGProps;
+
+export const Logo: FunctionComponent<LogoProps> = ({ variant, ...props }) => {
+  switch (variant) {
+    case "horizontal":
+      return <HLogo {...props} />;
+    case "pre-horizontal":
+      return <HLogoPre {...props} />;
+    case "dots":
+      return <LogoDots {...props} />;
+    default:
+      return <DefaultLogo {...props} />;
+  }
+};
+
+export const DefaultLogo: FunctionComponent<SVGProps> = ({
   mono,
   darkBackground,
   ...props
