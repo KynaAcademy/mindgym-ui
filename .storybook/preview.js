@@ -1,6 +1,6 @@
 import React, { Children, useContext } from "react";
 import { Theme, ThemeProvider } from "../src";
-import GlobalStyles from "../src/GlobalStyles";
+import { GlobalStyles } from "../src/GlobalStyles";
 import { useDarkMode } from "storybook-dark-mode";
 import tw, { css } from "twin.macro";
 

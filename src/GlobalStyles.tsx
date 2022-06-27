@@ -18,7 +18,7 @@ const BODY = styled.body<HtmlProps>(({ dark }) => [
   dark ? tw`bg-slate-800 text-slate-200` : tw`text-slate-900`,
 ]);
 
-const GlobalStyles = () => {
+export const GlobalStyles = () => {
   const mode = useMode();
 
   return (
@@ -42,5 +42,3 @@ const GlobalStyles = () => {
     </>
   );
 };
-
-export default GlobalStyles;
