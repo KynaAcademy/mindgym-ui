@@ -1,0 +1,11 @@
+.parcel-cache/
+.cache/
+.github/
+.storybook/
+node_modules/
+src/
+build-storybook.log
+package-lock.json
+yarn-error.log
+tailwind.config.js
+tsconfig.json
