@@ -63,7 +63,7 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
-    "node": ">= 12"
+    "node": ">= 16"
   },
   "babelMacros": {
     "twin": {
