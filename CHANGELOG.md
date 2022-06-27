@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.3...v1.0.4) (2022-06-27)
+
+
+### Bug Fixes
+
+* Various build and typing issues ([9e6bd6f](https://github.com/MindgymAcademy/mindgym-ui/commit/9e6bd6fae7abd8f26dd16d3500d95659d5d46ea7))
+
 ## [1.0.3](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.2...v1.0.3) (2022-06-27)
 
 
