@@ -26,7 +26,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: yarn build
         if: ${{ steps.release.outputs.release_created }}
-      - run: yarn publish --access public --tag $TAG_NAME
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}
           TAG_NAME: ${{steps.release.outputs.tag_name}}
