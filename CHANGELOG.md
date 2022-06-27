@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.0...v1.0.1) (2022-06-27)
+
+
+### Bug Fixes
+
+* rm refs to css ([6819970](https://github.com/MindgymAcademy/mindgym-ui/commit/6819970e6e9b4ff184ec41dd4df9ea4ef096b764))
+
 ## 1.0.0 (2022-06-27)
 
 
