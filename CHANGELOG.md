@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.4...v1.0.5) (2022-06-27)
+
+
+### Bug Fixes
+
+* Use npm to publish ([14e5fe0](https://github.com/MindgymAcademy/mindgym-ui/commit/14e5fe01c9bf20127bbcd244877962029010f155))
+
 ## [1.0.4](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.3...v1.0.4) (2022-06-27)
 
 
