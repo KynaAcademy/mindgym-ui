@@ -47,17 +47,19 @@ export const Guide: FunctionComponent<GuideProps> = ({
   return (
     <Section>
       <div tw="container">
-        <h2 tw="text-4xl font-black tracking-tight font-sans capitalize">
+        <h1 tw="text-3xl font-extrabold font-serif capitalize sm:text-4xl lg:text-5xl lg:text-center">
           {title}
-        </h2>
-        <ul tw="flex my-8 space-y-2 flex-col">
-          {items.map((item, i) => (
-            <li tw="flex items-center font-black font-sans text-lg" key={i}>
-              <Bullit type={bullit} num={i + 1} />
-              {item}
-            </li>
-          ))}
-        </ul>
+        </h1>
+        <article tw="w-full lg:mx-16 lg:max-w-lg">
+          <ul tw="flex my-8 space-y-2 flex-col">
+            {items.map((item, i) => (
+              <li tw="flex items-center font-black font-sans text-lg" key={i}>
+                <Bullit type={bullit} num={i + 1} />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </article>
       </div>
     </Section>
   );

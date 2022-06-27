@@ -446,16 +446,33 @@ const $20d73dc79c4db28e$export$dd9cef36367ff841 = ({ title: title , items: items
                 "maxWidth": "1536px"
             }
         }
-    }, (0, $cctsW$emotionreact.jsx)("h2", {
+    }, (0, $cctsW$emotionreact.jsx)("h1", {
         css: {
-            "fontSize": "2.25rem",
-            "lineHeight": "2.5rem",
-            "fontWeight": "900",
-            "letterSpacing": "-0.025em",
-            "fontFamily": 'Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-            "textTransform": "capitalize"
+            "fontSize": "1.875rem",
+            "lineHeight": "2.25rem",
+            "fontWeight": "800",
+            "fontFamily": 'Literata ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+            "textTransform": "capitalize",
+            "@media (min-width: 640px)": {
+                "fontSize": "2.25rem",
+                "lineHeight": "2.5rem"
+            },
+            "@media (min-width: 1024px)": {
+                "fontSize": "3rem",
+                "lineHeight": "1",
+                "textAlign": "center"
+            }
         }
-    }, title), (0, $cctsW$emotionreact.jsx)("ul", {
+    }, title), (0, $cctsW$emotionreact.jsx)("article", {
+        css: {
+            "width": "100%",
+            "@media (min-width: 1024px)": {
+                "marginLeft": "4rem",
+                "marginRight": "4rem",
+                "maxWidth": "32rem"
+            }
+        }
+    }, (0, $cctsW$emotionreact.jsx)("ul", {
         css: {
             "display": "flex",
             "marginTop": "2rem",
@@ -480,7 +497,7 @@ const $20d73dc79c4db28e$export$dd9cef36367ff841 = ({ title: title , items: items
         }, (0, $cctsW$emotionreact.jsx)($20d73dc79c4db28e$var$Bullit, {
             type: bullit,
             num: i + 1
-        }), item)))));
+        }), item))))));
 };
 $20d73dc79c4db28e$export$dd9cef36367ff841.defaultProps = {
     bullit: "numbers"
