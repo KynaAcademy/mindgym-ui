@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.5...v1.0.6) (2022-06-27)
+
+
+### Bug Fixes
+
+* GlobalStyles export ([3bff94c](https://github.com/MindgymAcademy/mindgym-ui/commit/3bff94c078f0a4d9470489b76c0730b16dbf9e9f))
+
 ## [1.0.5](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.4...v1.0.5) (2022-06-27)
 
 
