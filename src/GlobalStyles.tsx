@@ -35,6 +35,7 @@ const GlobalStyles = () => {
           href="https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&family=Montserrat&family=Permanent+Marker&display=swap"
           rel="stylesheet"
         />
+        <BODY dark={mode(false, true)} />
       </Helmet>
       <BaseStyles />
       <Global styles={customStyles} />

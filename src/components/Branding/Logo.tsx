@@ -1,5 +1,4 @@
 import { FunctionComponent } from "react";
-import tw, { styled } from "twin.macro";
 import useMode from "../../hooks/useMode";
 
 type SVGProps = {

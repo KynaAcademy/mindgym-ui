@@ -1,5 +1,4 @@
 import React, { FunctionComponent, ReactNode } from "react";
-import { classNames } from "../../lib/utils/classNames";
 import { Button } from "../UI/Button";
 import tw, { styled } from "twin.macro";
 import useMode from "../../hooks/useMode";

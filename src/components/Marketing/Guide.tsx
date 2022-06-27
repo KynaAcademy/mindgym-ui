@@ -16,8 +16,6 @@ type BullitProps = {
 };
 
 const Bullit: FunctionComponent<BullitProps> = ({ type, num }) => {
-  const mode = useMode();
-
   switch (type) {
     case "numbers":
       return (

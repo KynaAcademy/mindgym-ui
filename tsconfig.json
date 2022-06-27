@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*", "types"],
+  "include": ["src/**/*", "types/*"],
   "exclude": ["src/**/*.stories.tsx"],
   "compilerOptions": {
     "target": "es2021",
