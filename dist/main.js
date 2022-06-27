@@ -1269,102 +1269,61 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "marginBottom": "calc(0.25rem * var(--tw-space-y-reverse))"
                 }
             }
-        }, (0, $cctsW$emotionreact.jsx)((0, $cctsW$headlessuireact.Disclosure).Button, {
-            as: "a",
-            href: "#",
-            css: {
-                "--tw-bg-opacity": "1",
-                "backgroundColor": "rgba(232, 250, 158, var(--tw-bg-opacity))",
-                "--tw-border-opacity": "1",
-                "borderColor": "rgba(196, 243, 12, var(--tw-border-opacity))",
-                "--tw-text-opacity": "1",
-                "color": "rgba(196, 243, 12, var(--tw-text-opacity))",
-                "display": "block",
-                "paddingLeft": "0.75rem",
-                "paddingRight": "1rem",
-                "paddingTop": "0.5rem",
-                "paddingBottom": "0.5rem",
-                "borderLeftWidth": "4px",
-                "fontSize": "1rem",
-                "lineHeight": "1.5rem",
-                "fontWeight": "500"
-            }
-        }, "Dashboard"), (0, $cctsW$emotionreact.jsx)((0, $cctsW$headlessuireact.Disclosure).Button, {
-            as: "a",
-            href: "#",
-            css: {
-                "borderColor": "rgba(0, 0, 0, 0)",
-                "--tw-text-opacity": "1",
-                "color": "rgba(107, 114, 128, var(--tw-text-opacity))",
-                ":hover": {
+        }, links.map(({ href: href , label: label , active: active  })=>{
+            const current = active || typeof window !== "undefined" && window.location.pathname === href;
+            return current ? (0, $cctsW$emotionreact.jsx)((0, $cctsW$headlessuireact.Disclosure).Button, {
+                key: label,
+                as: "a",
+                href: href,
+                css: {
                     "--tw-bg-opacity": "1",
-                    "backgroundColor": "rgba(249, 250, 251, var(--tw-bg-opacity))",
+                    "backgroundColor": "rgba(232, 250, 158, var(--tw-bg-opacity))",
                     "--tw-border-opacity": "1",
-                    "borderColor": "rgba(209, 213, 219, var(--tw-border-opacity))",
+                    "borderColor": "rgba(196, 243, 12, var(--tw-border-opacity))",
                     "--tw-text-opacity": "1",
-                    "color": "rgba(55, 65, 81, var(--tw-text-opacity))"
-                },
-                "display": "block",
-                "paddingLeft": "0.75rem",
-                "paddingRight": "1rem",
-                "paddingTop": "0.5rem",
-                "paddingBottom": "0.5rem",
-                "borderLeftWidth": "4px",
-                "fontSize": "1rem",
-                "lineHeight": "1.5rem",
-                "fontWeight": "500"
-            }
-        }, "Team"), (0, $cctsW$emotionreact.jsx)((0, $cctsW$headlessuireact.Disclosure).Button, {
-            as: "a",
-            href: "#",
-            css: {
-                "borderColor": "rgba(0, 0, 0, 0)",
-                "--tw-text-opacity": "1",
-                "color": "rgba(107, 114, 128, var(--tw-text-opacity))",
-                ":hover": {
-                    "--tw-bg-opacity": "1",
-                    "backgroundColor": "rgba(249, 250, 251, var(--tw-bg-opacity))",
-                    "--tw-border-opacity": "1",
-                    "borderColor": "rgba(209, 213, 219, var(--tw-border-opacity))",
+                    "color": "rgba(31, 41, 55, var(--tw-text-opacity))",
+                    ":hover": {
+                        "--tw-bg-opacity": "1",
+                        "backgroundColor": "rgba(236, 252, 203, var(--tw-bg-opacity))"
+                    },
+                    "display": "block",
+                    "paddingLeft": "0.75rem",
+                    "paddingRight": "1rem",
+                    "paddingTop": "0.5rem",
+                    "paddingBottom": "0.5rem",
+                    "borderLeftWidth": "4px",
+                    "fontSize": "1rem",
+                    "lineHeight": "1.5rem",
+                    "fontWeight": "500"
+                }
+            }, label) : (0, $cctsW$emotionreact.jsx)((0, $cctsW$headlessuireact.Disclosure).Button, {
+                key: label,
+                as: "a",
+                href: href,
+                css: {
+                    "borderColor": "rgba(0, 0, 0, 0)",
                     "--tw-text-opacity": "1",
-                    "color": "rgba(55, 65, 81, var(--tw-text-opacity))"
-                },
-                "display": "block",
-                "paddingLeft": "0.75rem",
-                "paddingRight": "1rem",
-                "paddingTop": "0.5rem",
-                "paddingBottom": "0.5rem",
-                "borderLeftWidth": "4px",
-                "fontSize": "1rem",
-                "lineHeight": "1.5rem",
-                "fontWeight": "500"
-            }
-        }, "Projects"), (0, $cctsW$emotionreact.jsx)((0, $cctsW$headlessuireact.Disclosure).Button, {
-            as: "a",
-            href: "#",
-            css: {
-                "borderColor": "rgba(0, 0, 0, 0)",
-                "--tw-text-opacity": "1",
-                "color": "rgba(107, 114, 128, var(--tw-text-opacity))",
-                ":hover": {
-                    "--tw-bg-opacity": "1",
-                    "backgroundColor": "rgba(249, 250, 251, var(--tw-bg-opacity))",
-                    "--tw-border-opacity": "1",
-                    "borderColor": "rgba(209, 213, 219, var(--tw-border-opacity))",
-                    "--tw-text-opacity": "1",
-                    "color": "rgba(55, 65, 81, var(--tw-text-opacity))"
-                },
-                "display": "block",
-                "paddingLeft": "0.75rem",
-                "paddingRight": "1rem",
-                "paddingTop": "0.5rem",
-                "paddingBottom": "0.5rem",
-                "borderLeftWidth": "4px",
-                "fontSize": "1rem",
-                "lineHeight": "1.5rem",
-                "fontWeight": "500"
-            }
-        }, "Calendar"))))));
+                    "color": "rgba(107, 114, 128, var(--tw-text-opacity))",
+                    ":hover": {
+                        "--tw-bg-opacity": "1",
+                        "backgroundColor": "rgba(249, 250, 251, var(--tw-bg-opacity))",
+                        "--tw-border-opacity": "1",
+                        "borderColor": "rgba(209, 213, 219, var(--tw-border-opacity))",
+                        "--tw-text-opacity": "1",
+                        "color": "rgba(55, 65, 81, var(--tw-text-opacity))"
+                    },
+                    "display": "block",
+                    "paddingLeft": "0.75rem",
+                    "paddingRight": "1rem",
+                    "paddingTop": "0.5rem",
+                    "paddingBottom": "0.5rem",
+                    "borderLeftWidth": "4px",
+                    "fontSize": "1rem",
+                    "lineHeight": "1.5rem",
+                    "fontWeight": "500"
+                }
+            }, label);
+        }))))));
 };
 $69ab516b81419e01$export$42cfbb80f7861e77.defaultProps = {
     transparent: true

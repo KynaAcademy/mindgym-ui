@@ -107,34 +107,32 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
             <Disclosure.Panel tw="sm:hidden">
               <div tw="pt-2 pb-3 space-y-1">
                 {/* Current: "bg-lime-50 border-lime-400 text-lime-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  tw="bg-lime-200 border-lime text-lime block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                >
-                  Dashboard
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                >
-                  Team
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                >
-                  Projects
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
-                >
-                  Calendar
-                </Disclosure.Button>
+                {links.map(({ href, label, active }) => {
+                  const current =
+                    active ||
+                    (typeof window !== "undefined" &&
+                      window.location.pathname === href);
+
+                  return current ? (
+                    <Disclosure.Button
+                      key={label}
+                      as="a"
+                      href={href}
+                      tw="bg-lime-200 border-lime text-gray-800 hover:bg-lime-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                    >
+                      {label}
+                    </Disclosure.Button>
+                  ) : (
+                    <Disclosure.Button
+                      key={label}
+                      as="a"
+                      href={href}
+                      tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                    >
+                      {label}
+                    </Disclosure.Button>
+                  );
+                })}
               </div>
             </Disclosure.Panel>
           </>
