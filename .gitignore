@@ -5,3 +5,4 @@ yarn-error.log
 build-storybook.log
 package-lock.json
 build-storybook.log
+.cache/
