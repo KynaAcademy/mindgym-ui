@@ -32,12 +32,15 @@ const Theme = createContext<ThemeContext>({
 });
 
 const ThemeProvider = ({ children, colorScheme }: ThemeProviderProps) => {
-  const resolveMode = () =>
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  const resolveMode = () => {
+    if (typeof window === "undefined") return "light";
+
+    return localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
       ? "dark"
       : "light";
+  };
 
   const overrideMode = (mode: UIMode) => {
     dispatch(mode);

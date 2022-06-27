@@ -71,7 +71,9 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                   <div tw="hidden sm:ml-6 sm:flex sm:space-x-8">
                     {links.map(({ href, label, active }) => {
                       const current =
-                        active || window.location.pathname === href;
+                        active ||
+                        (typeof window !== "undefined" &&
+                          window.location.pathname === href);
 
                       return (
                         <NavbarLinkElement
