@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.1...v1.0.2) (2022-06-27)
+
+
+### Bug Fixes
+
+* Remove stale CSS file ([5dc1153](https://github.com/MindgymAcademy/mindgym-ui/commit/5dc1153fa11de77ceea5bb659db24d0278eb1a10))
+
 ## [1.0.1](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.0...v1.0.1) (2022-06-27)
 
 
