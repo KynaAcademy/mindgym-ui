@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
+    "build": "rm -rf dist && parcel build",
     "check": "tsc --noEmit",
     "test": "test-storybook",
     "storybook": "start-storybook -p 6006",
