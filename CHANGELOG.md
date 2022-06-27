@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.2...v1.0.3) (2022-06-27)
+
+
+### Bug Fixes
+
+* engine.node >= 16 ([e021df3](https://github.com/MindgymAcademy/mindgym-ui/commit/e021df3f128a81e8bb37d70b1f58f8ccc181e0fb))
+
 ## [1.0.2](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.1...v1.0.2) (2022-06-27)
 
 

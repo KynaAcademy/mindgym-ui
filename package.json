@@ -1,6 +1,6 @@
 {
   "name": "@mindgym/ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "module": "dist/module.js",
