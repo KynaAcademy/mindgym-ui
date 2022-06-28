@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import tw, { styled } from "twin.macro";
 
 export type ConclusionProps = {
   primary?: boolean;
-  children: string;
+  children: ReactNode;
 };
 
 export const Conclusion = styled.p<ConclusionProps>(({ primary }) => [

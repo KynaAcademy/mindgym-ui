@@ -79,7 +79,7 @@ export type StakeProps = {
 export const Stake: FunctionComponent<StakeProps>;
 export type ConclusionProps = {
     primary?: boolean;
-    children: string;
+    children: ReactNode;
 };
 export const Conclusion: any;
 export type HighlightProps = {
