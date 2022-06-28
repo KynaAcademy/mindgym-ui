@@ -8,6 +8,7 @@ export default {
   component: Conclusion,
   args: {
     children: "The Quick Brown Fox Jumped Over The Lazy Dog",
+    primary: false,
   },
 } as ComponentMeta<typeof Conclusion>;
 
