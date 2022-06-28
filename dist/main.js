@@ -973,6 +973,28 @@ $parcel$exportWildcard($c5bedcf3d1765544$exports, $f8a64a19359de842$exports);
 
 
 var $3b7fefa99ce7a6a4$exports = {};
+var $a294b0413d8ea55a$exports = {};
+
+$parcel$export($a294b0413d8ea55a$exports, "Conclusion", function () { return $a294b0413d8ea55a$export$841a3b647f218b89; });
+
+const $a294b0413d8ea55a$export$841a3b647f218b89 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).p(({ primary: primary  })=>[
+        {
+            "textTransform": "uppercase",
+            "fontWeight": "700",
+            "fontFamily": 'Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+            "paddingTop": "1rem",
+            "paddingBottom": "1rem"
+        },
+        primary ? {
+            "--tw-text-opacity": "1",
+            "color": "rgba(196, 243, 12, var(--tw-text-opacity))"
+        } : {
+            "--tw-text-opacity": "1",
+            "color": "rgba(255, 0, 99, var(--tw-text-opacity))"
+        }
+    ]);
+
+
 var $9bf308ee3116899e$exports = {};
 
 $parcel$export($9bf308ee3116899e$exports, "Highlight", function () { return $9bf308ee3116899e$export$39dbc3f558091353; });
@@ -1159,6 +1181,7 @@ const $d0f360e71d15513c$export$f99233281efd08a0 = ({ level: level , children: ch
 
 $parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $9bf308ee3116899e$exports);
 $parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $d0f360e71d15513c$exports);
+$parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $a294b0413d8ea55a$exports);
 
 
 var $273a5b437f075cc2$exports = {};

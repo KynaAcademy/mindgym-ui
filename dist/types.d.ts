@@ -77,6 +77,11 @@ export type StakeProps = {
     imageAlt?: string;
 };
 export const Stake: FunctionComponent<StakeProps>;
+export type ConclusionProps = {
+    primary?: boolean;
+    children: string;
+};
+export const Conclusion: any;
 export type HighlightProps = {
     primary?: boolean;
     children: ReactNode;
