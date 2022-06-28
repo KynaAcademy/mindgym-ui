@@ -82,6 +82,17 @@ export type HighlightProps = {
     children: ReactNode;
 };
 export const Highlight: FunctionComponent<HighlightProps>;
+export enum TitleLevel {
+    h1 = 1,
+    h2 = 2,
+    h3 = 3,
+    h4 = 4
+}
+export type TitleProps = {
+    level?: TitleLevel;
+    children: React.ReactNode;
+};
+export const Title: FunctionComponent<TitleProps>;
 type NavbarLink = {
     href: string;
     label: string;

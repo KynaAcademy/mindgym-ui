@@ -1061,7 +1061,104 @@ const $9bf308ee3116899e$var$PrimaryHighlightSVG = ({ className: className  })=>(
     })));
 
 
+var $d0f360e71d15513c$exports = {};
+
+$parcel$export($d0f360e71d15513c$exports, "TitleLevel", function () { return $d0f360e71d15513c$export$aa5425ec50adc2ac; });
+$parcel$export($d0f360e71d15513c$exports, "Title", function () { return $d0f360e71d15513c$export$f99233281efd08a0; });
+
+
+
+let $d0f360e71d15513c$export$aa5425ec50adc2ac;
+(function(TitleLevel1) {
+    TitleLevel1[TitleLevel1["h1"] = 1] = "h1";
+    TitleLevel1[TitleLevel1["h2"] = 2] = "h2";
+    TitleLevel1[TitleLevel1["h3"] = 3] = "h3";
+    TitleLevel1[TitleLevel1["h4"] = 4] = "h4";
+})($d0f360e71d15513c$export$aa5425ec50adc2ac || ($d0f360e71d15513c$export$aa5425ec50adc2ac = {}));
+const $d0f360e71d15513c$var$H1 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h1(()=>{
+    const mode = (0, $2623a1d7bc228148$export$2e2bcd8739ae039)();
+    return [
+        {
+            "fontSize": "3rem",
+            "lineHeight": "1",
+            "fontFamily": 'Literata ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+            "fontWeight": "900",
+            "marginTop": "1.5rem",
+            "marginBottom": "0.5rem"
+        },
+        mode("", {
+            "--tw-text-opacity": "1",
+            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
+        })
+    ];
+});
+const $d0f360e71d15513c$var$H2 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h2(()=>{
+    const mode = (0, $2623a1d7bc228148$export$2e2bcd8739ae039)();
+    return [
+        {
+            "fontSize": "1.875rem",
+            "lineHeight": "2.25rem",
+            "fontFamily": 'Literata ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+            "fontWeight": "900",
+            "marginTop": "1.5rem",
+            "marginBottom": "0.5rem"
+        },
+        mode("", {
+            "--tw-text-opacity": "1",
+            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
+        })
+    ];
+});
+const $d0f360e71d15513c$var$H3 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h3(()=>{
+    const mode = (0, $2623a1d7bc228148$export$2e2bcd8739ae039)();
+    return [
+        {
+            "fontSize": "1.25rem",
+            "lineHeight": "1.75rem",
+            "fontFamily": 'Literata ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+            "fontWeight": "900",
+            "marginTop": "1.5rem",
+            "marginBottom": "0.5rem"
+        },
+        mode("", {
+            "--tw-text-opacity": "1",
+            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
+        })
+    ];
+});
+const $d0f360e71d15513c$var$H4 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h4(()=>{
+    const mode = (0, $2623a1d7bc228148$export$2e2bcd8739ae039)();
+    return [
+        {
+            "fontSize": "1.125rem",
+            "lineHeight": "1.75rem",
+            "fontFamily": 'Literata ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+            "fontWeight": "700",
+            "marginTop": "1.5rem",
+            "marginBottom": "0.5rem"
+        },
+        mode("", {
+            "--tw-text-opacity": "1",
+            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
+        })
+    ];
+});
+const $d0f360e71d15513c$export$f99233281efd08a0 = ({ level: level , children: children  })=>{
+    switch(level){
+        case $d0f360e71d15513c$export$aa5425ec50adc2ac.h2:
+            return (0, $cctsW$emotionreact.jsx)($d0f360e71d15513c$var$H2, null, children);
+        case $d0f360e71d15513c$export$aa5425ec50adc2ac.h3:
+            return (0, $cctsW$emotionreact.jsx)($d0f360e71d15513c$var$H3, null, children);
+        case $d0f360e71d15513c$export$aa5425ec50adc2ac.h4:
+            return (0, $cctsW$emotionreact.jsx)($d0f360e71d15513c$var$H4, null, children);
+        default:
+            return (0, $cctsW$emotionreact.jsx)($d0f360e71d15513c$var$H1, null, children);
+    }
+};
+
+
 $parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $9bf308ee3116899e$exports);
+$parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $d0f360e71d15513c$exports);
 
 
 var $273a5b437f075cc2$exports = {};
