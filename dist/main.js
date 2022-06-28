@@ -718,10 +718,7 @@ const $9ef4ffc4c4beb9be$export$887967f05dc521ae = ({ header: header , title: tit
     }, (0, $cctsW$emotionreact.jsx)("div", {
         css: {
             "position": "relative",
-            "--tw-shadow": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-            "boxShadow": "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
             "@media (min-width: 640px)": {
-                "borderRadius": "1rem",
                 "overflow": "hidden"
             }
         }

@@ -47,7 +47,7 @@ export const Hero: FunctionComponent<HeroProps> = ({
     <div tw="relative">
       <Inset />
       <div tw="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div tw="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+        <div tw="relative sm:overflow-hidden">
           <div tw="absolute inset-0">
             {image && (
               <>
