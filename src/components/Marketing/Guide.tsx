@@ -1,5 +1,5 @@
 import { FunctionComponent, ReactNode } from "react";
-import useMode from "../../hooks/useMode";
+import { useMode } from "../../hooks/useMode";
 import tw, { styled } from "twin.macro";
 
 type BullitType = "numbers" | "checks" | ReactNode;

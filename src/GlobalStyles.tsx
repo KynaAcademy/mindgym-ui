@@ -2,7 +2,7 @@ import React from "react";
 import { Global } from "@emotion/react";
 import { Helmet } from "react-helmet";
 import tw, { css, styled, theme, GlobalStyles as BaseStyles } from "twin.macro";
-import useMode from "./hooks/useMode";
+import { useMode } from "./hooks/useMode";
 
 const customStyles = css`
   body {

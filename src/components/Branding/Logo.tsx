@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import useMode from "../../hooks/useMode";
+import { useMode } from "../../hooks/useMode";
 
 type SVGProps = {
   mono?: boolean;
