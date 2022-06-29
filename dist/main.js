@@ -409,7 +409,13 @@ const $20d73dc79c4db28e$var$Section = (0, ($parcel$interopDefault($cctsW$emotion
     return [
         {
             "padding": "0px",
-            "margin": "0px"
+            "margin": "0px",
+            "--tw-text-opacity": "1",
+            "color": "rgba(15, 23, 42, var(--tw-text-opacity))",
+            "@media (prefers-color-scheme: dark)": {
+                "--tw-text-opacity": "1",
+                "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
+            }
         },
         mode({
             "--tw-text-opacity": "1",
@@ -421,7 +427,6 @@ const $20d73dc79c4db28e$var$Section = (0, ($parcel$interopDefault($cctsW$emotion
     ];
 });
 const $20d73dc79c4db28e$export$dd9cef36367ff841 = ({ title: title , items: items , bullit: bullit  })=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return (0, $cctsW$emotionreact.jsx)($20d73dc79c4db28e$var$Section, null, (0, $cctsW$emotionreact.jsx)("div", {
         css: {
             "width": "100%",
@@ -684,12 +689,21 @@ const $9ef4ffc4c4beb9be$var$Inset = (0, ($parcel$interopDefault($cctsW$emotionst
             "left": "0px",
             "right": "0px",
             "bottom": "0px",
-            "height": "50%"
+            "height": "50%",
+            "--tw-bg-opacity": "1",
+            "backgroundColor": "rgba(241, 245, 249, var(--tw-bg-opacity))",
+            "@media (prefers-color-scheme: dark)": {
+                "--tw-bg-opacity": "1",
+                "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))"
+            }
         },
         mode({
             "--tw-bg-opacity": "1",
             "backgroundColor": "rgba(241, 245, 249, var(--tw-bg-opacity))"
-        }, "")
+        }, {
+            "--tw-bg-opacity": "1",
+            "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))"
+        })
     ];
 });
 const $9ef4ffc4c4beb9be$export$887967f05dc521ae = ({ header: header , title: title , leader: leader , follower: follower , image: image , imageAlt: imageAlt , primaryCTA: primaryCTA , secondaryCTA: secondaryCTA  })=>{
@@ -890,6 +904,12 @@ const $f8a64a19359de842$var$Section = (0, ($parcel$interopDefault($cctsW$emotion
         mode({
             "--tw-bg-opacity": "1",
             "backgroundColor": "rgba(241, 245, 249, var(--tw-bg-opacity))",
+            "@media (prefers-color-scheme: dark)": {
+                "--tw-bg-opacity": "1",
+                "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))",
+                "--tw-text-opacity": "1",
+                "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
+            },
             "--tw-text-opacity": "1",
             "color": "rgba(15, 23, 42, var(--tw-text-opacity))"
         }, {
@@ -914,7 +934,11 @@ const $f8a64a19359de842$var$Subtitle = (0, ($parcel$interopDefault($cctsW$emotio
         },
         mode({
             "--tw-text-opacity": "1",
-            "color": "rgba(51, 65, 85, var(--tw-text-opacity))"
+            "color": "rgba(51, 65, 85, var(--tw-text-opacity))",
+            "@media (prefers-color-scheme: dark)": {
+                "--tw-text-opacity": "1",
+                "color": "rgba(148, 163, 184, var(--tw-text-opacity))"
+            }
         }, {
             "--tw-text-opacity": "1",
             "color": "rgba(148, 163, 184, var(--tw-text-opacity))"
@@ -922,7 +946,6 @@ const $f8a64a19359de842$var$Subtitle = (0, ($parcel$interopDefault($cctsW$emotio
     ];
 });
 const $f8a64a19359de842$export$a348d077a2f485ad = ({ title: title , subtitle: subtitle , image: image , imageAlt: imageAlt  })=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return (0, $cctsW$emotionreact.jsx)($f8a64a19359de842$var$Section, null, (0, $cctsW$emotionreact.jsx)("header", {
         css: {
             "position": "relative",
@@ -1086,7 +1109,6 @@ $parcel$export($d0f360e71d15513c$exports, "TitleLevel", function () { return $d0
 $parcel$export($d0f360e71d15513c$exports, "Title", function () { return $d0f360e71d15513c$export$f99233281efd08a0; });
 
 
-
 let $d0f360e71d15513c$export$aa5425ec50adc2ac;
 (function(TitleLevel1) {
     TitleLevel1[TitleLevel1["h1"] = 1] = "h1";
@@ -1094,9 +1116,7 @@ let $d0f360e71d15513c$export$aa5425ec50adc2ac;
     TitleLevel1[TitleLevel1["h3"] = 3] = "h3";
     TitleLevel1[TitleLevel1["h4"] = 4] = "h4";
 })($d0f360e71d15513c$export$aa5425ec50adc2ac || ($d0f360e71d15513c$export$aa5425ec50adc2ac = {}));
-const $d0f360e71d15513c$var$H1 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h1(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
-    return [
+const $d0f360e71d15513c$var$H1 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h1(()=>[
         {
             "fontSize": "3rem",
             "lineHeight": "1",
@@ -1104,16 +1124,9 @@ const $d0f360e71d15513c$var$H1 = (0, ($parcel$interopDefault($cctsW$emotionstyle
             "fontWeight": "900",
             "marginTop": "1.5rem",
             "marginBottom": "0.5rem"
-        },
-        mode("", {
-            "--tw-text-opacity": "1",
-            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
-        })
-    ];
-});
-const $d0f360e71d15513c$var$H2 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h2(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
-    return [
+        }
+    ]);
+const $d0f360e71d15513c$var$H2 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h2(()=>[
         {
             "fontSize": "1.875rem",
             "lineHeight": "2.25rem",
@@ -1121,16 +1134,9 @@ const $d0f360e71d15513c$var$H2 = (0, ($parcel$interopDefault($cctsW$emotionstyle
             "fontWeight": "900",
             "marginTop": "1.5rem",
             "marginBottom": "0.5rem"
-        },
-        mode("", {
-            "--tw-text-opacity": "1",
-            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
-        })
-    ];
-});
-const $d0f360e71d15513c$var$H3 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h3(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
-    return [
+        }
+    ]);
+const $d0f360e71d15513c$var$H3 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h3(()=>[
         {
             "fontSize": "1.25rem",
             "lineHeight": "1.75rem",
@@ -1138,16 +1144,9 @@ const $d0f360e71d15513c$var$H3 = (0, ($parcel$interopDefault($cctsW$emotionstyle
             "fontWeight": "900",
             "marginTop": "1.5rem",
             "marginBottom": "0.5rem"
-        },
-        mode("", {
-            "--tw-text-opacity": "1",
-            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
-        })
-    ];
-});
-const $d0f360e71d15513c$var$H4 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h4(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
-    return [
+        }
+    ]);
+const $d0f360e71d15513c$var$H4 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).h4(()=>[
         {
             "fontSize": "1.125rem",
             "lineHeight": "1.75rem",
@@ -1155,13 +1154,8 @@ const $d0f360e71d15513c$var$H4 = (0, ($parcel$interopDefault($cctsW$emotionstyle
             "fontWeight": "700",
             "marginTop": "1.5rem",
             "marginBottom": "0.5rem"
-        },
-        mode("", {
-            "--tw-text-opacity": "1",
-            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
-        })
-    ];
-});
+        }
+    ]);
 const $d0f360e71d15513c$export$f99233281efd08a0 = ({ level: level , children: children  })=>{
     switch(level){
         case $d0f360e71d15513c$export$aa5425ec50adc2ac.h2:

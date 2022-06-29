@@ -14,7 +14,10 @@ const Section = styled.section(() => {
   const mode = useMode();
   return [
     tw`w-full mx-0 max-w-full px-0 py-6 sm:py-12`,
-    mode(tw`bg-slate-100 text-slate-900`, tw`bg-slate-800 text-slate-200`),
+    mode(
+      tw`bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200`,
+      tw`bg-slate-800 text-slate-200`
+    ),
   ];
 });
 
@@ -22,7 +25,7 @@ const Subtitle = styled.section(() => {
   const mode = useMode();
   return [
     tw`block text-base capitalize my-5 p-0`,
-    mode(tw`text-slate-700`, tw`text-slate-400`),
+    mode(tw`text-slate-700 dark:text-slate-400`, tw`text-slate-400`),
   ];
 });
 
@@ -32,8 +35,6 @@ export const Stake: FunctionComponent<StakeProps> = ({
   image,
   imageAlt,
 }) => {
-  const mode = useMode();
-
   return (
     <Section>
       <header tw="relative px-4 py-4 sm:px-6 sm:py-6 lg:py-8 lg:px-8 text-center">

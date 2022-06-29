@@ -34,7 +34,10 @@ const Bullit: FunctionComponent<BullitProps> = ({ type, num }) => {
 
 const Section = styled.section(() => {
   const mode = useMode();
-  return [tw`p-0 m-0`, mode(tw`text-slate-900`, tw`text-slate-200`)];
+  return [
+    tw`p-0 m-0 text-slate-900 dark:text-slate-200`,
+    mode(tw`text-slate-900`, tw`text-slate-200`),
+  ];
 });
 
 export const Guide: FunctionComponent<GuideProps> = ({
@@ -42,8 +45,6 @@ export const Guide: FunctionComponent<GuideProps> = ({
   items,
   bullit,
 }) => {
-  const mode = useMode();
-
   return (
     <Section>
       <div tw="container">
