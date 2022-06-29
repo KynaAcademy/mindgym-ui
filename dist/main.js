@@ -94,10 +94,11 @@ const $617b8c312431cf4f$export$d8964aec282183a3 = ({ children: children , colorS
 };
 
 
-const $2623a1d7bc228148$export$b06374babe9615a7 = ()=>{
+function $2623a1d7bc228148$export$b06374babe9615a7() {
     const { resolvedMode: resolvedMode  } = (0, $cctsW$react.useContext)((0, $617b8c312431cf4f$export$14faa19a0f3bbeb2));
-    return (light, dark)=>resolvedMode === "light" ? light : dark;
-};
+    const resolver = (light, dark)=>resolvedMode === "light" ? light : dark;
+    return resolver;
+}
 
 
 
@@ -1175,9 +1176,9 @@ const $d0f360e71d15513c$export$f99233281efd08a0 = ({ level: level , children: ch
 };
 
 
+$parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $a294b0413d8ea55a$exports);
 $parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $9bf308ee3116899e$exports);
 $parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $d0f360e71d15513c$exports);
-$parcel$exportWildcard($3b7fefa99ce7a6a4$exports, $a294b0413d8ea55a$exports);
 
 
 var $273a5b437f075cc2$exports = {};
