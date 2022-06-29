@@ -554,12 +554,12 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
             }
         },
         size === "large" && {
-            "paddingLeft": "1.5rem",
-            "paddingRight": "1.5rem",
+            "paddingLeft": "2rem",
+            "paddingRight": "2rem",
             "paddingTop": "1rem",
             "paddingBottom": "1rem",
-            "fontSize": "1.125rem",
-            "lineHeight": "1.75rem",
+            "fontSize": "0.75rem",
+            "lineHeight": "1rem",
             "@media (min-width: 640px)": {
                 "paddingLeft": "2rem",
                 "paddingRight": "2rem"
@@ -603,7 +603,7 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
             }
         }),
         secondary && {
-            "borderRadius": "0.25rem",
+            "borderRadius": "0.375rem",
             "--tw-text-opacity": "1",
             "color": "rgba(255, 255, 255, var(--tw-text-opacity))",
             "letterSpacing": "-0.025em",
@@ -615,10 +615,11 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
             }
         },
         primary && {
-            "borderRadius": "0.25rem",
+            "borderRadius": "0.375rem",
             "--tw-text-opacity": "1",
             "color": "rgba(30, 41, 59, var(--tw-text-opacity))",
-            "letterSpacing": "-0.025em",
+            "letterSpacing": "0.05em",
+            "fontWeight": "700",
             "--tw-bg-opacity": "1",
             "backgroundColor": "rgba(196, 243, 12, var(--tw-bg-opacity))",
             ":hover": {
@@ -993,6 +994,7 @@ const $a294b0413d8ea55a$export$841a3b647f218b89 = (0, ($parcel$interopDefault($c
             "color": "rgba(255, 0, 99, var(--tw-text-opacity))"
         }
     ]);
+$a294b0413d8ea55a$export$841a3b647f218b89.displayName = "Conclusion";
 
 
 var $9bf308ee3116899e$exports = {};
@@ -1775,6 +1777,8 @@ const $bc440fa7e3346d2d$export$c507fb1c2e1ac13a = ()=>{
         styles: $bc440fa7e3346d2d$var$customStyles
     }));
 };
+
+
 
 
 $parcel$exportWildcard(module.exports, $3df0df3d189b4cd7$exports);

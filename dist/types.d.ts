@@ -1,5 +1,5 @@
 import { ReactNode, FunctionComponent, AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
-type ThemeProviderProps = {
+export type ThemeProviderProps = {
     colorScheme?: any;
     children: ReactNode;
 };
@@ -12,7 +12,7 @@ export type ThemeContext = {
     resetMode: () => void;
 };
 export const Theme: import("react").Context<ThemeContext>;
-export const ThemeProvider: ({ children, colorScheme }: ThemeProviderProps) => import("@emotion/react/jsx-runtime").JSX.Element;
+export const ThemeProvider: ({ children, colorScheme, }: ThemeProviderProps) => import("@emotion/react/jsx-runtime").JSX.Element;
 type SVGProps = {
     mono?: boolean;
     className?: string;
@@ -79,7 +79,6 @@ export type StakeProps = {
 export const Stake: FunctionComponent<StakeProps>;
 export type ConclusionProps = {
     primary?: boolean;
-    children: ReactNode;
 };
 export const Conclusion: any;
 export type HighlightProps = {

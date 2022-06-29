@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { createContext, ReactNode, useEffect, useState } from "react";
 
-type ThemeProviderProps = {
+export type ThemeProviderProps = {
   colorScheme?: any;
   children: ReactNode;
 };
@@ -23,7 +23,7 @@ export type ThemeContext = {
   resetMode: () => void;
 };
 
-const Theme = createContext<ThemeContext>({
+export const Theme = createContext<ThemeContext>({
   mode: "os",
   colorScheme: "lime",
   resolvedMode: "light",
@@ -31,7 +31,10 @@ const Theme = createContext<ThemeContext>({
   resetMode: defaultReset,
 });
 
-const ThemeProvider = ({ children, colorScheme }: ThemeProviderProps) => {
+export const ThemeProvider = ({
+  children,
+  colorScheme,
+}: ThemeProviderProps) => {
   const resolveMode = () => {
     if (typeof window === "undefined") return "light";
 
@@ -86,5 +89,3 @@ const ThemeProvider = ({ children, colorScheme }: ThemeProviderProps) => {
     </Theme.Provider>
   );
 };
-
-export { Theme, ThemeProvider };
