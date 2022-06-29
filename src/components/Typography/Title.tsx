@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import tw, { styled } from "twin.macro";
-import useMode from "../../hooks/useMode";
+import { useMode } from "../../hooks/useMode";
 
 export enum TitleLevel {
   h1 = 1,

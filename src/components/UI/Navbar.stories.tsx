@@ -12,7 +12,7 @@ export default {
   // },
   args: {
     transparent: true,
-    onDarkBackground: false,
+    darkBackground: false,
     links: [
       { href: "#", label: "Home", active: true },
       { href: "#", label: "Blog" },

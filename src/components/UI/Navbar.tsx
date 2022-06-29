@@ -3,7 +3,7 @@ import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import tw, { styled } from "twin.macro";
 import { Logo, HLogoPre } from "../Branding/Logo";
-import useMode from "../../hooks/useMode";
+import { useMode } from "../../hooks/useMode";
 
 type NavbarLink = {
   href: string;

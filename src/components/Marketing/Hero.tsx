@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode } from "react";
 import { Button } from "../UI/Button";
 import tw, { styled } from "twin.macro";
-import useMode from "../../hooks/useMode";
+import { useMode } from "../../hooks/useMode";
 
 export type HeroProps = {
   title: string;

@@ -87,5 +87,5 @@ const links = [
   { href: "#", label: "About" },
 ];
 WithHeaderNavbar.args = {
-  header: <Navbar links={links} onDarkBackground />,
+  header: <Navbar links={links} darkBackground />,
 };
