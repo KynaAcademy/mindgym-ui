@@ -43,6 +43,7 @@ var $2623a1d7bc228148$exports = {};
 
 $parcel$defineInteropFlag($2623a1d7bc228148$exports);
 
+$parcel$export($2623a1d7bc228148$exports, "useMode", function () { return $2623a1d7bc228148$export$b06374babe9615a7; });
 $parcel$export($2623a1d7bc228148$exports, "default", function () { return $2623a1d7bc228148$export$2e2bcd8739ae039; });
 
 var $617b8c312431cf4f$exports = {};
@@ -99,11 +100,11 @@ const $617b8c312431cf4f$export$d8964aec282183a3 = ({ children: children , colorS
 };
 
 
-function $2623a1d7bc228148$var$useMode() {
+function $2623a1d7bc228148$export$b06374babe9615a7() {
     const { resolvedMode: resolvedMode  } = (0, $cctsW$react.useContext)((0, $617b8c312431cf4f$export$14faa19a0f3bbeb2));
     return (light, dark)=>resolvedMode === "light" ? light : dark;
 }
-var $2623a1d7bc228148$export$2e2bcd8739ae039 = $2623a1d7bc228148$var$useMode;
+var $2623a1d7bc228148$export$2e2bcd8739ae039 = $2623a1d7bc228148$export$b06374babe9615a7;
 
 
 

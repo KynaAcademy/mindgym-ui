@@ -13,6 +13,7 @@ export type ThemeContext = {
 };
 export const Theme: import("react").Context<ThemeContext>;
 export const ThemeProvider: ({ children, colorScheme, }: ThemeProviderProps) => import("@emotion/react/jsx-runtime").JSX.Element;
+export function useMode(): <L, D>(light: L, dark: D) => L | D;
 type SVGProps = {
     mono?: boolean;
     className?: string;
