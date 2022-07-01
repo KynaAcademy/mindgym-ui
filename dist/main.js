@@ -1268,10 +1268,6 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
             }
         }, (0, $cctsW$emotionreact.jsx)("div", {
             css: {
-                "display": "flex"
-            }
-        }, (0, $cctsW$emotionreact.jsx)("div", {
-            css: {
                 "flexShrink": "0",
                 "display": "flex",
                 "alignItems": "center"
@@ -1299,6 +1295,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
         })), (0, $cctsW$emotionreact.jsx)("div", {
             css: {
                 "display": "none",
+                "justifyContent": "flex-end",
                 "@media (min-width: 640px)": {
                     "marginLeft": "1.5rem",
                     "display": "flex",
@@ -1317,7 +1314,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                 darkBackground: mode(darkBackground, true),
                 href: href
             }, label);
-        }))), (0, $cctsW$emotionreact.jsx)("div", {
+        })), (0, $cctsW$emotionreact.jsx)("div", {
             css: {
                 "marginRight": "-0.5rem",
                 "display": "flex",
