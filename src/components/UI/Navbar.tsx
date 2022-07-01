@@ -57,38 +57,36 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
           <>
             <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div tw="flex justify-between h-16">
-                <div tw="flex">
-                  <div tw="flex-shrink-0 flex items-center">
-                    <HLogoPre
-                      darkBackground={mode(darkBackground, true)}
-                      tw="block lg:hidden h-8 w-auto"
-                    />
-                    <Logo
-                      darkBackground={mode(darkBackground, true)}
-                      tw="hidden lg:block h-8 w-auto"
-                    />
-                  </div>
-                  <div tw="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    {links.map(({ href, label, active }) => {
-                      const current =
-                        active ||
-                        (typeof window !== "undefined" &&
-                          window.location.pathname === href);
+                <div tw="flex-shrink-0 flex items-center">
+                  <HLogoPre
+                    darkBackground={mode(darkBackground, true)}
+                    tw="block lg:hidden h-8 w-auto"
+                  />
+                  <Logo
+                    darkBackground={mode(darkBackground, true)}
+                    tw="hidden lg:block h-8 w-auto"
+                  />
+                </div>
+                <div tw="hidden sm:ml-6 sm:flex sm:space-x-8 justify-end">
+                  {links.map(({ href, label, active }) => {
+                    const current =
+                      active ||
+                      (typeof window !== "undefined" &&
+                        window.location.pathname === href);
 
-                      return (
-                        <NavbarLinkElement
-                          key={label}
-                          {...{
-                            current,
-                            darkBackground: mode(darkBackground, true),
-                            href,
-                          }}
-                        >
-                          {label}
-                        </NavbarLinkElement>
-                      );
-                    })}
-                  </div>
+                    return (
+                      <NavbarLinkElement
+                        key={label}
+                        {...{
+                          current,
+                          darkBackground: mode(darkBackground, true),
+                          href,
+                        }}
+                      >
+                        {label}
+                      </NavbarLinkElement>
+                    );
+                  })}
                 </div>
                 <div tw="-mr-2 flex items-center sm:hidden">
                   {/* Mobile menu button */}
