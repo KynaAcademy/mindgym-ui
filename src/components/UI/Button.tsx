@@ -34,9 +34,9 @@ const createStyles = ({
   secondary,
   darkMode,
 }: SharedButtonProps) => [
-  tw`flex items-center justify-center border border-transparent rounded-sm shadow-sm font-bold uppercase`,
-  !size && tw`text-sm px-4 py-3 sm:px-6`,
-  size === "large" && tw`px-8 py-4 sm:px-8 text-xs`,
+  tw`inline-flex items-center border border-transparent rounded-md shadow-sm font-bold uppercase tracking-wide`,
+  !size && tw`text-sm px-8 py-3`,
+  size === "large" && tw`px-8 py-3 sm:px-8 text-sm`,
   size === "small" && tw`px-3 py-2 sm:px-4 text-xs`,
   !primary &&
     !secondary &&
@@ -44,9 +44,9 @@ const createStyles = ({
       ? tw`bg-slate-800 text-slate-200 border border-slate-200 hover:bg-slate-900`
       : tw`text-slate-700 bg-white border border-slate-700 hover:bg-slate-100`),
   secondary &&
-    tw`rounded-md text-white tracking-tight bg-pink-600 hover:bg-pink-200`,
+    tw`text-white hover:text-mg-slate bg-mg-secondary hover:bg-mg-secondary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-secondary`,
   primary &&
-    tw`rounded-md text-slate-800 tracking-wider font-bold bg-lime-600 hover:bg-lime-200`,
+    tw`bg-mg-primary hover:bg-mg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-primary`,
 ];
 
 export const AsButton = styled.button((props: SharedButtonProps) =>
