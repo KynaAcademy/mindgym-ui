@@ -58,14 +58,16 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
             <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div tw="flex justify-between h-16">
                 <div tw="flex-shrink-0 flex items-center">
-                  <HLogoPre
-                    darkBackground={mode(darkBackground, true)}
-                    tw="block lg:hidden h-8 w-auto"
-                  />
-                  <Logo
-                    darkBackground={mode(darkBackground, true)}
-                    tw="hidden lg:block h-8 w-auto"
-                  />
+                  <a href="/" rel="noopener noreferrer" target="_blank">
+                    <HLogoPre
+                      darkBackground={mode(darkBackground, true)}
+                      tw="block lg:hidden h-8 w-auto"
+                    />
+                    <Logo
+                      darkBackground={mode(darkBackground, true)}
+                      tw="hidden lg:block h-8 w-auto"
+                    />
+                  </a>
                 </div>
                 <div tw="hidden sm:ml-6 sm:flex sm:space-x-8 justify-end">
                   {links.map(({ href, label, active }) => {
