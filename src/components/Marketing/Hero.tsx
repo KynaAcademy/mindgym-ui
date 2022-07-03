@@ -49,7 +49,7 @@ export const Hero: FunctionComponent<HeroProps> = ({
   return (
     <div tw="relative">
       <Inset />
-      <div tw="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div tw="max-w-7xl mx-auto">
         <div tw="relative sm:overflow-hidden">
           <div tw="absolute inset-0">
             {image && (
@@ -67,12 +67,14 @@ export const Hero: FunctionComponent<HeroProps> = ({
             )}
           </div>
           {header && <div tw="z-50 relative px-4 py-4 -mb-16">{header}</div>}
-          <div tw="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-            <h1 tw="text-4xl font-extrabold lg:text-center sm:text-5xl lg:text-6xl">
-              {leader && <span tw="block text-gray-200 text-sm">{leader}</span>}
-              <span tw="block text-white font-serif mt-4 tracking-tight">
-                {title}
-              </span>
+          <div tw="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8 text-center">
+            <h1 tw="text-4xl md:max-w-2xl mx-auto font-bold font-serif pb-2 lg:pb-4 tracking-tight">
+              {leader && (
+                <span tw="block font-sans text-white text-lg pb-0">
+                  {leader}
+                </span>
+              )}
+              <span tw="block text-white font-serif mt-4">{title}</span>
             </h1>
             {follower && (
               <p tw="px-2 italic font-light mt-2 max-w-lg mx-auto lg:text-center text-base text-gray-300 sm:max-w-3xl">
