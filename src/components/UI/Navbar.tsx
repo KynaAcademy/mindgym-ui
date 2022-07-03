@@ -28,9 +28,9 @@ export type NavbarProps = {
 
 const NavbarLinkElement = styled.a(
   ({ current, darkBackground }: NavbarLinkProps) => [
-    tw`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium uppercase`,
-    current && darkBackground && tw`border-lime text-white`,
-    current && !darkBackground && tw`border-lime text-gray-900`,
+    tw`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-bold uppercase tracking-widest`,
+    current && darkBackground && tw`border-mg-primary text-white`,
+    current && !darkBackground && tw`border-mg-primary text-gray-900`,
     !darkBackground &&
       !current &&
       tw`border-transparent hover:border-gray-300 text-gray-500 hover:text-gray-700`,
@@ -92,7 +92,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                 </div>
                 <div tw="-mr-2 flex items-center sm:hidden">
                   {/* Mobile menu button */}
-                  <Disclosure.Button tw="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime">
+                  <Disclosure.Button tw="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-100">
                     <span tw="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon tw="block h-6 w-6" aria-hidden="true" />
@@ -118,7 +118,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                       key={label}
                       as="a"
                       href={href}
-                      tw="bg-lime-200 border-lime text-gray-800 hover:bg-lime-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                      tw="bg-lime-200 border-lime-100 text-gray-800 hover:bg-lime-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                     >
                       {label}
                     </Disclosure.Button>
