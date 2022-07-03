@@ -92,7 +92,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                 </div>
                 <div tw="-mr-2 flex items-center sm:hidden">
                   {/* Mobile menu button */}
-                  <Disclosure.Button tw="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-100">
+                  <Disclosure.Button tw="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-mg-primary-light">
                     <span tw="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon tw="block h-6 w-6" aria-hidden="true" />
@@ -118,7 +118,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                       key={label}
                       as="a"
                       href={href}
-                      tw="bg-lime-200 border-lime-100 text-gray-800 hover:bg-lime-100 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                      tw="bg-mg-primary-light border-mg-primary-light text-gray-800 hover:bg-mg-primary block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                     >
                       {label}
                     </Disclosure.Button>
@@ -127,7 +127,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                       key={label}
                       as="a"
                       href={href}
-                      tw="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                      tw="border-transparent text-gray-500 hover:bg-mg-accent hover:border-mg-subtle hover:text-mg-onyx block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
                     >
                       {label}
                     </Disclosure.Button>
