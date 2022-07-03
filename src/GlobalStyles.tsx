@@ -6,7 +6,7 @@ import { useMode } from "./hooks/useMode";
 
 const customStyles = css`
   body {
-    -webkit-tap-highlight-color: ${theme`colors.lime.DEFAULT`};
+    -webkit-tap-highlight-color: ${theme`colors[mg-primary-light]`};
     ${tw`antialiased`}
   }
 `;
