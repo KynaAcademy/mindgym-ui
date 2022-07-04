@@ -49,7 +49,7 @@ export default {
   args: {
     leader: "Online Courses Branded for Your Coding School to",
     title: "Offer Your Students and Teachers the Courses They Deserve",
-    follower: "Pay per active use license fee.",
+    follower: "Pay per active use license fee",
     primaryCTA: {
       href: "/join",
       label: "Join the Beta",

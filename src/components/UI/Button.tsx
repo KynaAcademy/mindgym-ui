@@ -34,7 +34,7 @@ const createStyles = ({
   secondary,
   darkMode,
 }: SharedButtonProps) => [
-  tw`inline-flex items-center border border-transparent rounded-md shadow-sm font-bold uppercase tracking-wide`,
+  tw`inline-flex items-center border border-transparent rounded-md hover:shadow-sm font-bold uppercase tracking-wide`,
   !size && tw`text-sm px-8 py-3`,
   size === "large" && tw`px-8 py-3 sm:px-8 text-sm`,
   size === "small" && tw`px-3 py-2 sm:px-4 text-xs`,
