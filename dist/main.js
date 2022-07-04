@@ -372,7 +372,7 @@ const $20d73dc79c4db28e$var$Bullit = ({ type: type , num: num  })=>{
                     "display": "flex",
                     "borderRadius": "9999px",
                     "--tw-bg-opacity": "1",
-                    "backgroundColor": "rgba(255, 0, 99, var(--tw-bg-opacity))",
+                    "backgroundColor": "rgba(219, 39, 119, var(--tw-bg-opacity))",
                     "--tw-text-opacity": "1",
                     "color": "rgba(255, 255, 255, var(--tw-text-opacity))",
                     "padding": "1rem",
@@ -530,36 +530,34 @@ function $93284dbe5656196f$var$_extends() {
 }
 const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , secondary: secondary , darkMode: darkMode  })=>[
         {
-            "display": "flex",
+            "display": "inline-flex",
             "alignItems": "center",
-            "justifyContent": "center",
             "borderWidth": "1px",
             "borderColor": "rgba(0, 0, 0, 0)",
-            "borderRadius": "0.125rem",
-            "--tw-shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-            "boxShadow": "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
+            "borderRadius": "0.375rem",
+            ":hover": {
+                "--tw-shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                "boxShadow": "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)"
+            },
             "fontWeight": "700",
-            "textTransform": "uppercase"
+            "textTransform": "uppercase",
+            "letterSpacing": "0.025em"
         },
         !size && {
             "fontSize": "0.875rem",
             "lineHeight": "1.25rem",
-            "paddingLeft": "1rem",
-            "paddingRight": "1rem",
+            "paddingLeft": "2rem",
+            "paddingRight": "2rem",
             "paddingTop": "0.75rem",
-            "paddingBottom": "0.75rem",
-            "@media (min-width: 640px)": {
-                "paddingLeft": "1.5rem",
-                "paddingRight": "1.5rem"
-            }
+            "paddingBottom": "0.75rem"
         },
         size === "large" && {
             "paddingLeft": "2rem",
             "paddingRight": "2rem",
-            "paddingTop": "1rem",
-            "paddingBottom": "1rem",
-            "fontSize": "0.75rem",
-            "lineHeight": "1rem",
+            "paddingTop": "0.75rem",
+            "paddingBottom": "0.75rem",
+            "fontSize": "0.875rem",
+            "lineHeight": "1.25rem",
             "@media (min-width: 640px)": {
                 "paddingLeft": "2rem",
                 "paddingRight": "2rem"
@@ -603,28 +601,43 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
             }
         }),
         secondary && {
-            "borderRadius": "0.375rem",
             "--tw-text-opacity": "1",
             "color": "rgba(255, 255, 255, var(--tw-text-opacity))",
-            "letterSpacing": "-0.025em",
+            ":hover": {
+                "--tw-text-opacity": "1",
+                "color": "rgba(32, 49, 65, var(--tw-text-opacity))",
+                "--tw-bg-opacity": "1",
+                "backgroundColor": "rgba(255, 227, 238, var(--tw-bg-opacity))"
+            },
             "--tw-bg-opacity": "1",
             "backgroundColor": "rgba(255, 0, 99, var(--tw-bg-opacity))",
-            ":hover": {
-                "--tw-bg-opacity": "1",
-                "backgroundColor": "rgba(239, 168, 184, var(--tw-bg-opacity))"
+            ":focus": {
+                "outline": "2px solid transparent",
+                "outlineOffset": "2px",
+                "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+                "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+                "boxShadow": "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
+                "--tw-ring-offset-width": "2px",
+                "--tw-ring-opacity": "1",
+                "--tw-ring-color": "rgba(255, 0, 99, var(--tw-ring-opacity))"
             }
         },
         primary && {
-            "borderRadius": "0.375rem",
-            "--tw-text-opacity": "1",
-            "color": "rgba(30, 41, 59, var(--tw-text-opacity))",
-            "letterSpacing": "0.05em",
-            "fontWeight": "700",
             "--tw-bg-opacity": "1",
             "backgroundColor": "rgba(196, 243, 12, var(--tw-bg-opacity))",
             ":hover": {
                 "--tw-bg-opacity": "1",
                 "backgroundColor": "rgba(232, 250, 158, var(--tw-bg-opacity))"
+            },
+            ":focus": {
+                "outline": "2px solid transparent",
+                "outlineOffset": "2px",
+                "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+                "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+                "boxShadow": "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
+                "--tw-ring-offset-width": "2px",
+                "--tw-ring-opacity": "1",
+                "--tw-ring-color": "rgba(196, 243, 12, var(--tw-ring-opacity))"
             }
         }
     ];
@@ -715,15 +728,7 @@ const $9ef4ffc4c4beb9be$export$887967f05dc521ae = ({ header: header , title: tit
         css: {
             "maxWidth": "80rem",
             "marginLeft": "auto",
-            "marginRight": "auto",
-            "@media (min-width: 640px)": {
-                "paddingLeft": "1.5rem",
-                "paddingRight": "1.5rem"
-            },
-            "@media (min-width: 1024px)": {
-                "paddingLeft": "2rem",
-                "paddingRight": "2rem"
-            }
+            "marginRight": "auto"
         }
     }, (0, $cctsW$emotionreact.jsx)("div", {
         css: {
@@ -788,6 +793,7 @@ const $9ef4ffc4c4beb9be$export$887967f05dc521ae = ({ header: header , title: tit
             "paddingRight": "1rem",
             "paddingTop": "4rem",
             "paddingBottom": "4rem",
+            "textAlign": "center",
             "@media (min-width: 640px)": {
                 "paddingLeft": "1.5rem",
                 "paddingRight": "1.5rem",
@@ -805,24 +811,28 @@ const $9ef4ffc4c4beb9be$export$887967f05dc521ae = ({ header: header , title: tit
         css: {
             "fontSize": "2.25rem",
             "lineHeight": "2.5rem",
-            "fontWeight": "800",
-            "@media (min-width: 640px)": {
-                "fontSize": "3rem",
-                "lineHeight": "1"
+            "marginLeft": "auto",
+            "marginRight": "auto",
+            "fontWeight": "700",
+            "fontFamily": 'Literata ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+            "paddingBottom": "0.5rem",
+            "letterSpacing": "-0.025em",
+            "@media (min-width: 768px)": {
+                "maxWidth": "42rem"
             },
             "@media (min-width: 1024px)": {
-                "textAlign": "center",
-                "fontSize": "3.75rem",
-                "lineHeight": "1"
+                "paddingBottom": "1rem"
             }
         }
     }, leader && (0, $cctsW$emotionreact.jsx)("span", {
         css: {
             "display": "block",
+            "fontFamily": 'Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
             "--tw-text-opacity": "1",
-            "color": "rgba(229, 231, 235, var(--tw-text-opacity))",
-            "fontSize": "0.875rem",
-            "lineHeight": "1.25rem"
+            "color": "rgba(255, 255, 255, var(--tw-text-opacity))",
+            "fontSize": "1.125rem",
+            "lineHeight": "1.75rem",
+            "paddingBottom": "0px"
         }
     }, leader), (0, $cctsW$emotionreact.jsx)("span", {
         css: {
@@ -830,8 +840,7 @@ const $9ef4ffc4c4beb9be$export$887967f05dc521ae = ({ header: header , title: tit
             "--tw-text-opacity": "1",
             "color": "rgba(255, 255, 255, var(--tw-text-opacity))",
             "fontFamily": 'Literata ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-            "marginTop": "1rem",
-            "letterSpacing": "-0.025em"
+            "marginTop": "1rem"
         }
     }, title)), follower && (0, $cctsW$emotionreact.jsx)("p", {
         css: {
@@ -1006,10 +1015,10 @@ const $a294b0413d8ea55a$export$841a3b647f218b89 = (0, ($parcel$interopDefault($c
         },
         primary ? {
             "--tw-text-opacity": "1",
-            "color": "rgba(196, 243, 12, var(--tw-text-opacity))"
+            "color": "rgba(101, 163, 13, var(--tw-text-opacity))"
         } : {
             "--tw-text-opacity": "1",
-            "color": "rgba(255, 0, 99, var(--tw-text-opacity))"
+            "color": "rgba(219, 39, 119, var(--tw-text-opacity))"
         }
     ]);
 $a294b0413d8ea55a$export$841a3b647f218b89.displayName = "Conclusion";
@@ -1197,8 +1206,9 @@ const $69ab516b81419e01$var$NavbarLinkElement = (0, ($parcel$interopDefault($cct
             "borderBottomWidth": "2px",
             "fontSize": "0.875rem",
             "lineHeight": "1.25rem",
-            "fontWeight": "500",
-            "textTransform": "uppercase"
+            "fontWeight": "700",
+            "textTransform": "uppercase",
+            "letterSpacing": "0.1em"
         },
         current && darkBackground && {
             "--tw-border-opacity": "1",
@@ -1272,6 +1282,10 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                 "display": "flex",
                 "alignItems": "center"
             }
+        }, (0, $cctsW$emotionreact.jsx)("a", {
+            href: "/",
+            rel: "noopener noreferrer",
+            target: "_blank"
         }, (0, $cctsW$emotionreact.jsx)((0, $0c03e1166409509c$export$361608d1d463a8e6), {
             darkBackground: mode(darkBackground, true),
             css: {
@@ -1292,7 +1306,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "display": "block"
                 }
             }
-        })), (0, $cctsW$emotionreact.jsx)("div", {
+        }))), (0, $cctsW$emotionreact.jsx)("div", {
             css: {
                 "display": "none",
                 "justifyContent": "flex-end",
@@ -1346,7 +1360,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "boxShadow": "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
                     "--tw-ring-inset": "inset",
                     "--tw-ring-opacity": "1",
-                    "--tw-ring-color": "rgba(196, 243, 12, var(--tw-ring-opacity))"
+                    "--tw-ring-color": "rgba(232, 250, 158, var(--tw-ring-opacity))"
                 }
             }
         }, (0, $cctsW$emotionreact.jsx)("span", {
@@ -1401,12 +1415,12 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "--tw-bg-opacity": "1",
                     "backgroundColor": "rgba(232, 250, 158, var(--tw-bg-opacity))",
                     "--tw-border-opacity": "1",
-                    "borderColor": "rgba(196, 243, 12, var(--tw-border-opacity))",
+                    "borderColor": "rgba(232, 250, 158, var(--tw-border-opacity))",
                     "--tw-text-opacity": "1",
                     "color": "rgba(31, 41, 55, var(--tw-text-opacity))",
                     ":hover": {
                         "--tw-bg-opacity": "1",
-                        "backgroundColor": "rgba(236, 252, 203, var(--tw-bg-opacity))"
+                        "backgroundColor": "rgba(196, 243, 12, var(--tw-bg-opacity))"
                     },
                     "display": "block",
                     "paddingLeft": "0.75rem",
@@ -1428,11 +1442,11 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "color": "rgba(107, 114, 128, var(--tw-text-opacity))",
                     ":hover": {
                         "--tw-bg-opacity": "1",
-                        "backgroundColor": "rgba(249, 250, 251, var(--tw-bg-opacity))",
+                        "backgroundColor": "rgba(220, 228, 238, var(--tw-bg-opacity))",
                         "--tw-border-opacity": "1",
-                        "borderColor": "rgba(209, 213, 219, var(--tw-border-opacity))",
+                        "borderColor": "rgba(164, 176, 205, var(--tw-border-opacity))",
                         "--tw-text-opacity": "1",
-                        "color": "rgba(55, 65, 81, var(--tw-text-opacity))"
+                        "color": "rgba(6, 3, 4, var(--tw-text-opacity))"
                     },
                     "display": "block",
                     "paddingLeft": "0.75rem",
@@ -1719,7 +1733,7 @@ const $bc440fa7e3346d2d$var$customStyles = (0, $cctsW$emotionreact.css)($bc440fa
     -webkit-tap-highlight-color: ${0};
     ${0}
   }
-`), "#C4F30C", {
+`), "#E8FA9E", {
     "WebkitFontSmoothing": "antialiased",
     "MozOsxFontSmoothing": "grayscale"
 });
