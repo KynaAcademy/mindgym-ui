@@ -58,7 +58,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
             <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div tw="flex justify-between h-16">
                 <div tw="flex-shrink-0 flex items-center">
-                  <a href="/" rel="noopener noreferrer" target="_blank">
+                  <a href="/">
                     <HLogoPre
                       darkBackground={mode(darkBackground, true)}
                       tw="block lg:hidden h-8 w-auto"
