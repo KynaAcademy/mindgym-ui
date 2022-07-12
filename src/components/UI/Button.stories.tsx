@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
 import { Button } from "./Button";
+import { CalendarIcon, CogIcon } from "@heroicons/react/outline";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -26,12 +27,14 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: "Button",
+  Icon: CogIcon,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   secondary: true,
   label: "Button",
+  Icon: CalendarIcon,
 };
 
 export const Tertiary = Template.bind({});

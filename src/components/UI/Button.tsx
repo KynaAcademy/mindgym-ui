@@ -14,6 +14,7 @@ type SharedButtonProps = {
   secondary?: boolean;
   tertiary?: boolean;
   label?: string;
+  Icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   children?: ReactNode;
   size?: ButtonSize;
   darkMode?: boolean;
@@ -63,7 +64,7 @@ export const AsAnchor = styled.a((props: SharedButtonProps) =>
 
 export const Button: FunctionComponent<ButtonProps> = (props) => {
   const mode = useMode();
-  const { label, children, className, href, ...rest } = props;
+  const { label, Icon, children, className, href, ...rest } = props;
   const darkMode = mode(false, true);
 
   if (href) {
@@ -71,6 +72,7 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
       <AsAnchor
         darkMode={darkMode}
         className={className}
+        Icon={Icon}
         href={href}
         {...(rest as Partial<AnchorHTMLAttributes<HTMLAnchorElement>>)}
       >
@@ -82,6 +84,7 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
     <AsButton
       darkMode={darkMode}
       className={className}
+      Icon={Icon}
       {...(rest as Partial<ButtonHTMLAttributes<HTMLButtonElement>>)}
     >
       {children || label}
