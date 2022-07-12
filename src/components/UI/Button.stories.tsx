@@ -8,10 +8,10 @@ export default {
   component: Button,
   parameters: {
     design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/vUURdvzTa19j0rTvTGfcwM/Untitled?node-id=11%3A4',
-    }
-  }
+      type: "figma",
+      url: "https://www.figma.com/file/vUURdvzTa19j0rTvTGfcwM/Untitled?node-id=11%3A4",
+    },
+  },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   // argTypes: {
   //   backgroundColor: { control: "color" },
@@ -31,6 +31,12 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   secondary: true,
+  label: "Button",
+};
+
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  tertiary: true,
   label: "Button",
 };
 

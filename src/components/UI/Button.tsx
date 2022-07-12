@@ -12,6 +12,7 @@ export type ButtonSize = "large" | "small";
 type SharedButtonProps = {
   primary?: boolean;
   secondary?: boolean;
+  tertiary?: boolean;
   label?: string;
   children?: ReactNode;
   size?: ButtonSize;
@@ -32,6 +33,7 @@ const createStyles = ({
   size,
   primary,
   secondary,
+  tertiary,
   darkMode,
 }: SharedButtonProps) => [
   tw`inline-flex items-center border border-transparent rounded-md hover:shadow-sm font-bold uppercase tracking-wide`,
@@ -40,9 +42,12 @@ const createStyles = ({
   size === "small" && tw`px-3 py-2 sm:px-4 text-xs`,
   !primary &&
     !secondary &&
+    !tertiary &&
     (darkMode
       ? tw`bg-slate-800 text-slate-200 border border-slate-200 hover:bg-slate-900`
-      : tw`text-slate-700 bg-white border border-slate-700 hover:bg-slate-100`),
+      : tw`text-slate-700 bg-transparent border border-slate-700 hover:bg-slate-100`),
+  tertiary &&
+    tw`text-mg-subtle border-mg-subtle hover:border-mg-slate hover:text-mg-slate focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-subtle`,
   secondary &&
     tw`text-white hover:text-mg-slate bg-mg-secondary hover:bg-mg-secondary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-secondary`,
   primary &&
