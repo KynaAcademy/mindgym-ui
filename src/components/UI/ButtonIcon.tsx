@@ -1,6 +1,3 @@
-import * as SolidIcons from "@heroicons/react/solid";
-import * as OutlineIcons from "@heroicons/react/outline";
-
 import React, {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
@@ -17,10 +14,6 @@ interface Props {
 export const ButtonIcon = (props: Props): JSX.Element => {
   const { icon, color, size } = props;
 
-  {
-    React.cloneElement(icon, { tw: "..." });
-  }
-
   const classes = [
     `${color ? color : "text-black"}`,
     size ? "h-12" : "h-6",
@@ -28,7 +21,6 @@ export const ButtonIcon = (props: Props): JSX.Element => {
   ];
 
   return (
-    // @ts-ignore
-    <Icon className={classes.join(" ")} />
+    {React.cloneElement(icon, { tw: "..." })}
   );
 };
