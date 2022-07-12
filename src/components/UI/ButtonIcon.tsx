@@ -1,26 +1,13 @@
-import React, {
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-  FunctionComponent,
-  ReactNode,
-} from "react";
+import React, { FC, ReactElement } from "react";
+import { ButtonSize } from "./Button";
 
 interface Props {
-  icon?: string;
+  icon?: ReactElement;
   color?: string;
-  size?: number;
+  size?: ButtonSize;
 }
 
-export const ButtonIcon = (props: Props): JSX.Element => {
-  const { icon, color, size } = props;
-
-  const classes = [
-    `${color ? color : "text-black"}`,
-    size ? "h-12" : "h-6",
-    size ? "w-12" : "w-6",
-  ];
-
-  return (
-    {React.cloneElement(icon, { tw: "..." })}
-  );
+export const ButtonIcon: FC<Props> = ({ icon, ...props }) => {
+  if (!icon) return null;
+  return React.cloneElement(icon, { ...props, ariaHidden: true }, null);
 };

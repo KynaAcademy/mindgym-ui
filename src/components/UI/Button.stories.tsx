@@ -27,14 +27,14 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: "Button",
-  icon: {<CogIcon />},
+  icon: <CogIcon />,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   secondary: true,
   label: "Button",
-  icon: {<CalendarIcon />},
+  icon: <CalendarIcon />,
 };
 
 export const Tertiary = Template.bind({});

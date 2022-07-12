@@ -2,10 +2,12 @@ import React, {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
   FunctionComponent,
+  ReactElement,
   ReactNode,
 } from "react";
 import tw, { styled } from "twin.macro";
 import { useMode } from "../../hooks/useMode";
+import { ButtonIcon } from "./ButtonIcon";
 
 export type ButtonSize = "large" | "small";
 
@@ -14,7 +16,7 @@ type SharedButtonProps = {
   secondary?: boolean;
   tertiary?: boolean;
   label?: string;
-  icon: React.ReactNode;
+  icon: ReactElement;
   children?: ReactNode;
   size?: ButtonSize;
   darkMode?: boolean;
@@ -62,9 +64,16 @@ export const AsAnchor = styled.a((props: SharedButtonProps) =>
   createStyles(props)
 );
 
-export const Button: FunctionComponent<ButtonProps> = (props) => {
+export const Button: FunctionComponent<ButtonProps> = ({
+  label,
+  size,
+  icon,
+  children,
+  className,
+  href,
+  ...rest
+}) => {
   const mode = useMode();
-  const { label, icon, children, className, href, ...rest } = props;
   const darkMode = mode(false, true);
 
   if (href) {
@@ -76,6 +85,7 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
         href={href}
         {...(rest as Partial<AnchorHTMLAttributes<HTMLAnchorElement>>)}
       >
+        <ButtonIcon tw="-ml-1 mr-2 h-5 w-5" size={size} icon={icon} />
         {children || label}
       </AsAnchor>
     );
@@ -87,6 +97,7 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
       icon={icon}
       {...(rest as Partial<ButtonHTMLAttributes<HTMLButtonElement>>)}
     >
+      <ButtonIcon tw="-ml-1 mr-2 h-5 w-5" size={size} icon={icon} />
       {children || label}
     </AsButton>
   );
