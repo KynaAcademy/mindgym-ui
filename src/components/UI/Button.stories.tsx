@@ -41,6 +41,7 @@ export const Tertiary = Template.bind({});
 Tertiary.args = {
   tertiary: true,
   label: "Button",
+  icon: <CalendarIcon />,
 };
 
 export const Large = Template.bind({});
