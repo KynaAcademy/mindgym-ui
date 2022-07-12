@@ -1,4 +1,4 @@
-import { ReactNode, FunctionComponent, AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { ReactNode, FunctionComponent, AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
 export type ThemeProviderProps = {
     colorScheme?: any;
     children: ReactNode;
@@ -39,7 +39,9 @@ export type ButtonSize = "large" | "small";
 type SharedButtonProps = {
     primary?: boolean;
     secondary?: boolean;
+    tertiary?: boolean;
     label?: string;
+    icon: ReactElement;
     children?: ReactNode;
     size?: ButtonSize;
     darkMode?: boolean;
