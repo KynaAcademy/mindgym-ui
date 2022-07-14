@@ -16,13 +16,13 @@ type SharedButtonProps = {
   secondary?: boolean;
   tertiary?: boolean;
   label?: string;
-  icon: ReactElement;
+  icon?: ReactElement;
   children?: ReactNode;
   size?: ButtonSize;
   darkMode?: boolean;
 };
 
-type ButtonPropsForButtonElement = { href?: string } & SharedButtonProps &
+type ButtonPropsForButtonElement = { href?: never } & SharedButtonProps &
   Partial<ButtonHTMLAttributes<HTMLButtonElement>>;
 
 type ButtonPropsForLink = {
