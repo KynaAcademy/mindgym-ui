@@ -468,7 +468,7 @@ function $93284dbe5656196f$var$_extends() {
     };
     return $93284dbe5656196f$var$_extends.apply(this, arguments);
 }
-const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , secondary: secondary , tertiary: tertiary  })=>[
+const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , secondary: secondary , tertiary: tertiary , textOnly: textOnly  })=>[
         {
             "display": "inline-flex",
             "alignItems": "center",
@@ -601,6 +601,9 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
                 "--tw-ring-opacity": "1",
                 "--tw-ring-color": "rgba(196, 243, 12, var(--tw-ring-opacity))"
             }
+        },
+        !!textOnly && {
+            "borderWidth": "0px"
         }
     ];
 const $93284dbe5656196f$export$1b8f8980778ed204 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).button((props)=>$93284dbe5656196f$var$createStyles(props));

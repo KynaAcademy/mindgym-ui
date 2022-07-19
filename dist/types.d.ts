@@ -28,6 +28,7 @@ type SharedButtonProps = {
     icon?: ReactElement;
     children?: ReactNode;
     size?: ButtonSize;
+    textOnly?: boolean;
 };
 type ButtonPropsForButtonElement = {
     href?: never;
