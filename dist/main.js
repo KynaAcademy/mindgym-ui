@@ -472,7 +472,6 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
         {
             "display": "inline-flex",
             "alignItems": "center",
-            "borderWidth": "1px",
             "borderColor": "rgba(0, 0, 0, 0)",
             "borderRadius": "0.375rem",
             ":hover": {
@@ -521,7 +520,6 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
                 "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))",
                 "--tw-text-opacity": "1",
                 "color": "rgba(226, 232, 240, var(--tw-text-opacity))",
-                "borderWidth": "1px",
                 "--tw-border-opacity": "1",
                 "borderColor": "rgba(226, 232, 240, var(--tw-border-opacity))",
                 ":hover": {
@@ -532,7 +530,6 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
             "--tw-text-opacity": "1",
             "color": "rgba(51, 65, 85, var(--tw-text-opacity))",
             "backgroundColor": "rgba(0, 0, 0, 0)",
-            "borderWidth": "1px",
             "--tw-border-opacity": "1",
             "borderColor": "rgba(51, 65, 85, var(--tw-border-opacity))",
             ":hover": {
@@ -602,8 +599,16 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
                 "--tw-ring-color": "rgba(196, 243, 12, var(--tw-ring-opacity))"
             }
         },
-        !!textOnly && {
-            "borderWidth": "0px"
+        !!textOnly ? {
+            "borderWidth": "0px",
+            "@media (prefers-color-scheme: dark)": {
+                "borderWidth": "0px"
+            }
+        } : {
+            "borderWidth": "1px",
+            "@media (prefers-color-scheme: dark)": {
+                "borderWidth": "1px"
+            }
         }
     ];
 const $93284dbe5656196f$export$1b8f8980778ed204 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).button((props)=>$93284dbe5656196f$var$createStyles(props));

@@ -38,21 +38,21 @@ const createStyles = ({
   tertiary,
   textOnly,
 }: SharedButtonProps) => [
-  tw`inline-flex items-center border border-transparent rounded-md hover:shadow-sm font-bold uppercase tracking-wide`,
+  tw`inline-flex items-center border-transparent rounded-md hover:shadow-sm font-bold uppercase tracking-wide`,
   !size && tw`text-sm px-8 py-3`,
   size === "large" && tw`px-8 py-3 sm:px-8 text-sm`,
   size === "small" && tw`px-3 py-2 sm:px-4 text-xs`,
   !primary &&
     !secondary &&
     !tertiary &&
-    tw`dark:bg-slate-800 dark:text-slate-200 dark:border dark:border-slate-200 dark:hover:bg-slate-900 text-slate-700 bg-transparent border border-slate-700 hover:bg-slate-100`,
+    tw`dark:bg-slate-800 dark:text-slate-200 dark:border-slate-200 dark:hover:bg-slate-900 text-slate-700 bg-transparent border-slate-700 hover:bg-slate-100`,
   tertiary &&
     tw`text-mg-subtle border-mg-subtle hover:border-mg-slate hover:text-mg-slate focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-subtle`,
   secondary &&
     tw`text-white hover:text-mg-slate bg-mg-secondary hover:bg-mg-secondary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-secondary`,
   primary &&
     tw`bg-mg-primary hover:bg-mg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-primary`,
-  !!textOnly && tw`border-0 `,
+  !!textOnly ? tw`border-0 dark:border-0` : tw`border dark:border`,
 ];
 
 export const AsButton = styled.button((props: SharedButtonProps) =>
