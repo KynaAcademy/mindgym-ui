@@ -56,11 +56,17 @@ const $617b8c312431cf4f$export$14faa19a0f3bbeb2 = /*#__PURE__*/ (0, $cctsW$react
     overrideMode: $617b8c312431cf4f$var$defaultOverride,
     resetMode: $617b8c312431cf4f$var$defaultReset
 });
+const $617b8c312431cf4f$var$resolveMode = ()=>{
+    if (typeof window === "undefined") return "light";
+    return localStorage.theme === "dark" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
 const $617b8c312431cf4f$export$d8964aec282183a3 = ({ children: children , colorScheme: colorScheme  })=>{
-    const resolveMode = ()=>{
-        if (typeof window === "undefined") return "light";
-        return localStorage.theme === "dark" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    };
+    const [modeState, dispatch] = (0, $cctsW$react.useState)($617b8c312431cf4f$var$resolveMode());
+    (0, $cctsW$react.useEffect)(()=>{
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>{
+            updateMode();
+        });
+    });
     const overrideMode = (mode)=>{
         dispatch(mode);
         mode === "os" ? resetMode() : localStorage.theme = mode;
@@ -72,21 +78,15 @@ const $617b8c312431cf4f$export$d8964aec282183a3 = ({ children: children , colorS
         updateMode();
     };
     const updateMode = ()=>{
-        const currentMode = resolveMode();
+        const currentMode = $617b8c312431cf4f$var$resolveMode();
         dispatch(currentMode);
         currentMode === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
     };
-    const [modeState, dispatch] = (0, $cctsW$react.useState)(resolveMode());
-    (0, $cctsW$react.useEffect)(()=>{
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>{
-            updateMode();
-        });
-    });
     return (0, $cctsW$emotionreact.jsx)($617b8c312431cf4f$export$14faa19a0f3bbeb2.Provider, {
         value: {
             mode: modeState,
             colorScheme: colorScheme || "lime",
-            resolvedMode: resolveMode(),
+            resolvedMode: $617b8c312431cf4f$var$resolveMode(),
             overrideMode: overrideMode,
             resetMode: resetMode
         }

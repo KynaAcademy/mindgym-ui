@@ -1,4 +1,4 @@
-import { ReactNode, FunctionComponent, AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
+import React, { ReactNode, FunctionComponent, AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
 export type ThemeProviderProps = {
     colorScheme?: any;
     children: ReactNode;
@@ -11,7 +11,7 @@ export type ThemeContext = {
     overrideMode: (mode: UIMode) => void;
     resetMode: () => void;
 };
-export const Theme: import("react").Context<ThemeContext>;
+export const Theme: React.Context<ThemeContext>;
 export const ThemeProvider: ({ children, colorScheme, }: ThemeProviderProps) => import("@emotion/react/jsx-runtime").JSX.Element;
 export type ModeResolveFunction = <L, D>(light: L, dark: D) => L | D;
 export function useMode(): ModeResolveFunction;

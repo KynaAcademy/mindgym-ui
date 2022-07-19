@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { createContext, ReactNode, useEffect, useState } from "react";
+import React, { createContext, ReactNode, useEffect, useState } from "react";
 
 export type ThemeProviderProps = {
   colorScheme?: any;
@@ -31,19 +31,29 @@ export const Theme = createContext<ThemeContext>({
   resetMode: defaultReset,
 });
 
+const resolveMode = () => {
+  if (typeof window === "undefined") return "light";
+
+  return localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ? "dark"
+    : "light";
+};
+
 export const ThemeProvider = ({
   children,
   colorScheme,
 }: ThemeProviderProps) => {
-  const resolveMode = () => {
-    if (typeof window === "undefined") return "light";
+  const [modeState, dispatch] = useState<UIMode>(resolveMode());
 
-    return localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ? "dark"
-      : "light";
-  };
+  useEffect(() => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", () => {
+        updateMode();
+      });
+  });
 
   const overrideMode = (mode: UIMode) => {
     dispatch(mode);
@@ -64,16 +74,6 @@ export const ThemeProvider = ({
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
   };
-
-  const [modeState, dispatch] = useState<UIMode>(resolveMode());
-
-  useEffect(() => {
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", () => {
-        updateMode();
-      });
-  });
 
   return (
     <Theme.Provider
