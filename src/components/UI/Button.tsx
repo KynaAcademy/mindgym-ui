@@ -6,7 +6,6 @@ import React, {
   ReactNode,
 } from "react";
 import tw, { styled } from "twin.macro";
-import { useMode } from "../../hooks/useMode";
 import { ButtonIcon } from "./ButtonIcon";
 
 export type ButtonSize = "large" | "small";
@@ -19,7 +18,6 @@ type SharedButtonProps = {
   icon?: ReactElement;
   children?: ReactNode;
   size?: ButtonSize;
-  darkMode?: boolean;
 };
 
 type ButtonPropsForButtonElement = { href?: never } & SharedButtonProps &
@@ -37,7 +35,6 @@ const createStyles = ({
   primary,
   secondary,
   tertiary,
-  darkMode,
 }: SharedButtonProps) => [
   tw`inline-flex items-center border border-transparent rounded-md hover:shadow-sm font-bold uppercase tracking-wide`,
   !size && tw`text-sm px-8 py-3`,
@@ -46,9 +43,7 @@ const createStyles = ({
   !primary &&
     !secondary &&
     !tertiary &&
-    (darkMode
-      ? tw`bg-slate-800 text-slate-200 border border-slate-200 hover:bg-slate-900`
-      : tw`text-slate-700 bg-transparent border border-slate-700 hover:bg-slate-100`),
+    tw`dark:bg-slate-800 dark:text-slate-200 dark:border dark:border-slate-200 dark:hover:bg-slate-900 text-slate-700 bg-transparent border border-slate-700 hover:bg-slate-100`,
   tertiary &&
     tw`text-mg-subtle border-mg-subtle hover:border-mg-slate hover:text-mg-slate focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-subtle`,
   secondary &&
@@ -73,13 +68,9 @@ export const Button: FunctionComponent<ButtonProps> = ({
   href,
   ...rest
 }) => {
-  const mode = useMode();
-  const darkMode = mode(false, true);
-
   if (href) {
     return (
       <AsAnchor
-        darkMode={darkMode}
         className={className}
         icon={icon}
         href={href}
@@ -92,7 +83,6 @@ export const Button: FunctionComponent<ButtonProps> = ({
   }
   return (
     <AsButton
-      darkMode={darkMode}
       className={className}
       icon={icon}
       {...(rest as Partial<ButtonHTMLAttributes<HTMLButtonElement>>)}

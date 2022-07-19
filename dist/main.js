@@ -1,6 +1,6 @@
 var $cctsW$emotionreact = require("@emotion/react");
-var $cctsW$react = require("react");
 var $cctsW$emotionstyled = require("@emotion/styled");
+var $cctsW$react = require("react");
 var $cctsW$headlessuireact = require("@headlessui/react");
 var $cctsW$heroiconsreactoutline = require("@heroicons/react/outline");
 var $cctsW$reacthelmet = require("react-helmet");
@@ -36,71 +36,6 @@ $parcel$export($0c03e1166409509c$exports, "HLogo", function () { return $0c03e11
 $parcel$export($0c03e1166409509c$exports, "HLogoPre", function () { return $0c03e1166409509c$export$361608d1d463a8e6; });
 $parcel$export($0c03e1166409509c$exports, "LogoDots", function () { return $0c03e1166409509c$export$fd27702a64f1a709; });
 $parcel$export($0c03e1166409509c$exports, "DefaultLogo", function () { return $0c03e1166409509c$export$523e896ec86fba5b; });
-var $2623a1d7bc228148$exports = {};
-
-$parcel$export($2623a1d7bc228148$exports, "useMode", function () { return $2623a1d7bc228148$export$b06374babe9615a7; });
-
-var $617b8c312431cf4f$exports = {};
-
-$parcel$export($617b8c312431cf4f$exports, "Theme", function () { return $617b8c312431cf4f$export$14faa19a0f3bbeb2; });
-$parcel$export($617b8c312431cf4f$exports, "ThemeProvider", function () { return $617b8c312431cf4f$export$d8964aec282183a3; });
-
-
-const $617b8c312431cf4f$var$initialUIMode = "os";
-const $617b8c312431cf4f$var$defaultOverride = ()=>$617b8c312431cf4f$var$initialUIMode;
-const $617b8c312431cf4f$var$defaultReset = ()=>$617b8c312431cf4f$var$initialUIMode;
-const $617b8c312431cf4f$export$14faa19a0f3bbeb2 = /*#__PURE__*/ (0, $cctsW$react.createContext)({
-    mode: "os",
-    colorScheme: "lime",
-    resolvedMode: "light",
-    overrideMode: $617b8c312431cf4f$var$defaultOverride,
-    resetMode: $617b8c312431cf4f$var$defaultReset
-});
-const $617b8c312431cf4f$var$resolveMode = ()=>{
-    if (typeof window === "undefined") return "light";
-    return localStorage.theme === "dark" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-};
-const $617b8c312431cf4f$export$d8964aec282183a3 = ({ children: children , colorScheme: colorScheme  })=>{
-    const [modeState, dispatch] = (0, $cctsW$react.useState)($617b8c312431cf4f$var$resolveMode());
-    (0, $cctsW$react.useEffect)(()=>{
-        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>{
-            updateMode();
-        });
-    });
-    const overrideMode = (mode)=>{
-        dispatch(mode);
-        mode === "os" ? resetMode() : localStorage.theme = mode;
-        updateMode();
-    };
-    const resetMode = ()=>{
-        dispatch("os");
-        localStorage.removeItem("theme");
-        updateMode();
-    };
-    const updateMode = ()=>{
-        const currentMode = $617b8c312431cf4f$var$resolveMode();
-        dispatch(currentMode);
-        currentMode === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
-    };
-    return (0, $cctsW$emotionreact.jsx)($617b8c312431cf4f$export$14faa19a0f3bbeb2.Provider, {
-        value: {
-            mode: modeState,
-            colorScheme: colorScheme || "lime",
-            resolvedMode: $617b8c312431cf4f$var$resolveMode(),
-            overrideMode: overrideMode,
-            resetMode: resetMode
-        }
-    }, children);
-};
-
-
-function $2623a1d7bc228148$export$b06374babe9615a7() {
-    const { resolvedMode: resolvedMode  } = (0, $cctsW$react.useContext)((0, $617b8c312431cf4f$export$14faa19a0f3bbeb2));
-    const resolver = (light, dark)=>resolvedMode === "light" ? light : dark;
-    return resolver;
-}
-
-
 
 function $0c03e1166409509c$var$_extends() {
     $0c03e1166409509c$var$_extends = Object.assign ? Object.assign.bind() : function(target) {
@@ -125,7 +60,6 @@ const $0c03e1166409509c$export$e6ff31bff12b7ff4 = ({ variant: variant , ...props
     }
 };
 const $0c03e1166409509c$export$523e896ec86fba5b = ({ mono: mono , darkBackground: darkBackground , ...props })=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return (0, $cctsW$emotionreact.jsx)("svg", $0c03e1166409509c$var$_extends({
         viewBox: "0 0 989.69 437.93",
         fill: "none"
@@ -164,35 +98,34 @@ const $0c03e1166409509c$export$523e896ec86fba5b = ({ mono: mono , darkBackground
     }, (0, $cctsW$emotionreact.jsx)("path", {
         d: "M21.69,311.9h45.8l31.63,89.66h.39l31.83-89.66H177V449.31H146.67V343.92h-.38l-36.1,105.39H87.09L52.35,343.92H52V449.31H21.69Z",
         transform: "translate(-21.69 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M204.51,311.9h30.27V449.31H204.51Z",
         transform: "translate(-21.69 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M262.34,311.9h41.14l58.42,95.49h.39V311.9h30.27V449.31H353l-60-97.82h-.39v97.82H262.34Z",
         transform: "translate(-21.69 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M420.51,311.9h45.41a129.45,129.45,0,0,1,31.34,3.69,71.84,71.84,0,0,1,25.91,11.93A58.5,58.5,0,0,1,540.74,349q6.5,13.2,6.5,32,0,16.69-6.31,29.4a63.11,63.11,0,0,1-17,21.35,74.93,74.93,0,0,1-24.65,13.1,95.54,95.54,0,0,1-29.3,4.47H420.51Zm30.27,109.46H466.5A84.28,84.28,0,0,0,486,419.22a41.65,41.65,0,0,0,15.62-7.08,33.92,33.92,0,0,0,10.38-13q3.79-8.06,3.79-19.7A38.29,38.29,0,0,0,512,361.88a35.14,35.14,0,0,0-10.18-12.33,44.76,44.76,0,0,0-15.05-7.28,67,67,0,0,0-18.14-2.42H450.78Z",
         transform: "translate(-21.69 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M692.21,439.6a109.1,109.1,0,0,1-28,10.09,141.89,141.89,0,0,1-29.69,3.11,84.46,84.46,0,0,1-29.69-5.05,67.86,67.86,0,0,1-23.49-14.46A65.48,65.48,0,0,1,566,410.49a83.52,83.52,0,0,1,0-59.77,65.62,65.62,0,0,1,15.43-22.81,68.16,68.16,0,0,1,23.49-14.46,84.69,84.69,0,0,1,29.69-5,110,110,0,0,1,30.37,4,59.47,59.47,0,0,1,24.36,13.68L668,349.36a42.75,42.75,0,0,0-14-9.71q-7.77-3.28-19.41-3.3a45.12,45.12,0,0,0-17.56,3.3,39.64,39.64,0,0,0-13.49,9.22,40.52,40.52,0,0,0-8.64,14.07,53.6,53.6,0,0,0,0,35.42,40.55,40.55,0,0,0,8.64,14A39.22,39.22,0,0,0,617,421.55a44.94,44.94,0,0,0,17.56,3.3,57.82,57.82,0,0,0,17.08-2.23,64.38,64.38,0,0,0,11.45-4.56V395.74H638.45V367.79h53.76Z",
         transform: "translate(-21.69 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M752.57,390.7l-51.63-78.8H738.6l29.11,51.43,30.86-51.43h35.9l-51.63,78.8v58.61H752.57Z",
         transform: "translate(-21.69 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M844.56,311.9h45.8L922,401.56h.38l31.83-89.66h45.61V449.31H969.55V343.92h-.39l-36.1,105.39H910L875.22,343.92h-.38V449.31H844.56Z",
         transform: "translate(-21.69 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     })));
 };
 const $0c03e1166409509c$export$ec975bafc9ee5d87 = ({ mono: mono , darkBackground: darkBackground , ...props })=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return (0, $cctsW$emotionreact.jsx)("svg", $0c03e1166409509c$var$_extends({
         viewBox: "0 0 974.81 134.58",
         fill: "none"
@@ -228,35 +161,34 @@ const $0c03e1166409509c$export$ec975bafc9ee5d87 = ({ mono: mono , darkBackground
     }, (0, $cctsW$emotionreact.jsx)("path", {
         d: "M314.22,74.2h24.46l16.9,47.89h.21l17-47.89h24.35v73.38H381V91.3h-.2l-19.28,56.28H349.15L330.6,91.3h-.21v56.28H314.22Z",
         transform: "translate(-24.19 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M411.86,74.2H428v73.38H411.86Z",
         transform: "translate(-24.19 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M442.75,74.2h22l31.2,51h.21v-51H512.3v73.38H491.15l-32-52.24h-.2v52.24H442.75Z",
         transform: "translate(-24.19 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M527.22,74.2h24.25a69.3,69.3,0,0,1,16.74,2,38.36,38.36,0,0,1,13.84,6.37A31.3,31.3,0,0,1,591.43,94q3.47,7.05,3.47,17.1a34.82,34.82,0,0,1-3.37,15.7,33.61,33.61,0,0,1-9.07,11.4,40,40,0,0,1-13.16,7,51.06,51.06,0,0,1-15.65,2.38H527.22Zm16.17,58.46h8.39a45.15,45.15,0,0,0,10.42-1.14,22.15,22.15,0,0,0,8.34-3.79,18.12,18.12,0,0,0,5.55-6.94,24.58,24.58,0,0,0,2-10.52,20.49,20.49,0,0,0-2-9.38,18.8,18.8,0,0,0-5.44-6.58,23.92,23.92,0,0,0-8-3.89,35.89,35.89,0,0,0-9.7-1.29h-9.53Z",
         transform: "translate(-24.19 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M672.33,142.4a58.33,58.33,0,0,1-14.93,5.39,75.5,75.5,0,0,1-15.86,1.66,45.18,45.18,0,0,1-15.86-2.7A36.18,36.18,0,0,1,613.14,139a35,35,0,0,1-8.24-12.18,41.37,41.37,0,0,1-2.95-16,41.44,41.44,0,0,1,2.95-16,35,35,0,0,1,8.24-12.18A36.48,36.48,0,0,1,625.68,75a45.18,45.18,0,0,1,15.86-2.7,58.51,58.51,0,0,1,16.22,2.13,31.75,31.75,0,0,1,13,7.31L659.37,94.2A22.81,22.81,0,0,0,651.91,89a26.72,26.72,0,0,0-10.37-1.76A24.12,24.12,0,0,0,632.16,89,21,21,0,0,0,625,94a21.45,21.45,0,0,0-4.61,7.51,28.6,28.6,0,0,0,0,18.92,21.69,21.69,0,0,0,4.61,7.46,20.88,20.88,0,0,0,7.2,4.92,23.94,23.94,0,0,0,9.38,1.76,30.67,30.67,0,0,0,9.12-1.19,34,34,0,0,0,6.12-2.43V119H643.62V104.05h28.71Z",
         transform: "translate(-24.19 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M704.56,116.28,677,74.2H697.1l15.55,27.47L729.13,74.2H748.3l-27.57,42.08v31.3H704.56Z",
         transform: "translate(-24.19 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M753.69,74.2h24.46l16.9,47.89h.2l17-47.89h24.36v73.38H820.44V91.3h-.21L801,147.58H788.62L770.07,91.3h-.21v56.28H753.69Z",
         transform: "translate(-24.19 -14.87)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     })));
 };
 const $0c03e1166409509c$export$361608d1d463a8e6 = ({ mono: mono , darkBackground: darkBackground , ...props })=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return (0, $cctsW$emotionreact.jsx)("svg", $0c03e1166409509c$var$_extends({
         viewBox: "0 0 839.81 228.3",
         fill: "none"
@@ -295,31 +227,31 @@ const $0c03e1166409509c$export$361608d1d463a8e6 = ({ mono: mono , darkBackground
     }, (0, $cctsW$emotionreact.jsx)("path", {
         d: "M283.07,90.44h27l18.66,52.89H329l18.77-52.89h26.9v81.05H356.79V109.33h-.23l-21.29,62.16H321.65l-20.49-62.16h-.23v62.16H283.07Z",
         transform: "translate(-20.19 -10.7)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M390.9,90.44h17.86v81.05H390.9Z",
         transform: "translate(-20.19 -10.7)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M425,90.44h24.26l34.46,56.32H484V90.44h17.86v81.05H478.47l-35.37-57.7h-.23v57.7H425Z",
         transform: "translate(-20.19 -10.7)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M518.31,90.44h26.78a76.47,76.47,0,0,1,18.49,2.18,42.17,42.17,0,0,1,15.28,7,34.49,34.49,0,0,1,10.36,12.65q3.84,7.78,3.84,18.88a38.56,38.56,0,0,1-3.72,17.35,37.38,37.38,0,0,1-10,12.59,44.27,44.27,0,0,1-14.54,7.72,56.26,56.26,0,0,1-17.28,2.64H518.31ZM536.17,155h9.27a49.85,49.85,0,0,0,11.5-1.26,24.57,24.57,0,0,0,9.22-4.17,20.17,20.17,0,0,0,6.12-7.67,27.18,27.18,0,0,0,2.23-11.62,22.63,22.63,0,0,0-2.23-10.36,20.72,20.72,0,0,0-6-7.27,26.25,26.25,0,0,0-8.87-4.29,39.21,39.21,0,0,0-10.7-1.43H536.17Z",
         transform: "translate(-20.19 -10.7)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M678.56,165.76a64.47,64.47,0,0,1-16.48,6,83.73,83.73,0,0,1-17.51,1.83,50,50,0,0,1-17.52-3A39.9,39.9,0,0,1,613.2,162a38.71,38.71,0,0,1-9.1-13.45,49.27,49.27,0,0,1,0-35.25,38.71,38.71,0,0,1,9.1-13.45,40,40,0,0,1,13.85-8.53,49.8,49.8,0,0,1,17.52-3,64.63,64.63,0,0,1,17.91,2.35,35,35,0,0,1,14.37,8.07l-12.59,13.73a25.28,25.28,0,0,0-8.25-5.72,29.28,29.28,0,0,0-11.44-1.94,26.46,26.46,0,0,0-10.36,1.94,23.25,23.25,0,0,0-8,5.44,23.86,23.86,0,0,0-5.09,8.3,31.54,31.54,0,0,0,0,20.89,24,24,0,0,0,5.09,8.24,23.25,23.25,0,0,0,8,5.44,26.46,26.46,0,0,0,10.36,1.94,34,34,0,0,0,10.07-1.31,38.75,38.75,0,0,0,6.75-2.69V139.89H646.86V123.41h31.7Z",
         transform: "translate(-20.19 -10.7)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M714.17,136.92,683.72,90.44h22.2l17.17,30.34,18.2-30.34h21.18L732,136.92v34.57H714.17Z",
         transform: "translate(-20.19 -10.7)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     }), (0, $cctsW$emotionreact.jsx)("path", {
         d: "M768.42,90.44h27l18.66,52.89h.23L833.1,90.44H860v81.05H842.14V109.33h-.23l-21.29,62.16H807l-20.49-62.16h-.23v62.16H768.42Z",
         transform: "translate(-20.19 -10.7)",
-        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : mode("#000", "currentcolor")
+        fill: mono ? "currentcolor" : darkBackground ? "#ffffff" : "currentcolor"
     })));
 };
 const $0c03e1166409509c$export$fd27702a64f1a709 = ({ mono: mono , ...props })=>{
@@ -363,7 +295,6 @@ var $20d73dc79c4db28e$exports = {};
 $parcel$export($20d73dc79c4db28e$exports, "Guide", function () { return $20d73dc79c4db28e$export$dd9cef36367ff841; });
 
 
-
 const $20d73dc79c4db28e$var$Bullit = ({ type: type , num: num  })=>{
     switch(type){
         case "numbers":
@@ -405,7 +336,6 @@ const $20d73dc79c4db28e$var$Bullit = ({ type: type , num: num  })=>{
     }
 };
 const $20d73dc79c4db28e$var$Section = (0, ($parcel$interopDefault($cctsW$emotionstyled))).section(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return [
         {
             "padding": "0px",
@@ -417,13 +347,14 @@ const $20d73dc79c4db28e$var$Section = (0, ($parcel$interopDefault($cctsW$emotion
                 "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
             }
         },
-        mode({
+        {
             "--tw-text-opacity": "1",
-            "color": "rgba(15, 23, 42, var(--tw-text-opacity))"
-        }, {
-            "--tw-text-opacity": "1",
-            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
-        })
+            "color": "rgba(15, 23, 42, var(--tw-text-opacity))",
+            "@media (prefers-color-scheme: dark)": {
+                "--tw-text-opacity": "1",
+                "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
+            }
+        }
     ];
 });
 const $20d73dc79c4db28e$export$dd9cef36367ff841 = ({ title: title , items: items , bullit: bullit  })=>{
@@ -517,7 +448,6 @@ $parcel$export($93284dbe5656196f$exports, "Button", function () { return $93284d
 
 
 
-
 const $a580f6540b6391c8$export$e1c22a2ee2645e36 = ({ icon: icon , ...props })=>{
     if (!icon) return null;
     return /*#__PURE__*/ (0, ($parcel$interopDefault($cctsW$react))).cloneElement(icon, {
@@ -538,7 +468,7 @@ function $93284dbe5656196f$var$_extends() {
     };
     return $93284dbe5656196f$var$_extends.apply(this, arguments);
 }
-const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , secondary: secondary , tertiary: tertiary , darkMode: darkMode  })=>[
+const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , secondary: secondary , tertiary: tertiary  })=>[
         {
             "display": "inline-flex",
             "alignItems": "center",
@@ -585,19 +515,20 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
                 "paddingRight": "1rem"
             }
         },
-        !primary && !secondary && !tertiary && (darkMode ? {
-            "--tw-bg-opacity": "1",
-            "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))",
-            "--tw-text-opacity": "1",
-            "color": "rgba(226, 232, 240, var(--tw-text-opacity))",
-            "borderWidth": "1px",
-            "--tw-border-opacity": "1",
-            "borderColor": "rgba(226, 232, 240, var(--tw-border-opacity))",
-            ":hover": {
+        !primary && !secondary && !tertiary && {
+            "@media (prefers-color-scheme: dark)": {
                 "--tw-bg-opacity": "1",
-                "backgroundColor": "rgba(15, 23, 42, var(--tw-bg-opacity))"
-            }
-        } : {
+                "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))",
+                "--tw-text-opacity": "1",
+                "color": "rgba(226, 232, 240, var(--tw-text-opacity))",
+                "borderWidth": "1px",
+                "--tw-border-opacity": "1",
+                "borderColor": "rgba(226, 232, 240, var(--tw-border-opacity))",
+                ":hover": {
+                    "--tw-bg-opacity": "1",
+                    "backgroundColor": "rgba(15, 23, 42, var(--tw-bg-opacity))"
+                }
+            },
             "--tw-text-opacity": "1",
             "color": "rgba(51, 65, 85, var(--tw-text-opacity))",
             "backgroundColor": "rgba(0, 0, 0, 0)",
@@ -608,7 +539,7 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
                 "--tw-bg-opacity": "1",
                 "backgroundColor": "rgba(241, 245, 249, var(--tw-bg-opacity))"
             }
-        }),
+        },
         tertiary && {
             "--tw-text-opacity": "1",
             "color": "rgba(164, 176, 205, var(--tw-text-opacity))",
@@ -675,10 +606,7 @@ const $93284dbe5656196f$var$createStyles = ({ size: size , primary: primary , se
 const $93284dbe5656196f$export$1b8f8980778ed204 = (0, ($parcel$interopDefault($cctsW$emotionstyled))).button((props)=>$93284dbe5656196f$var$createStyles(props));
 const $93284dbe5656196f$export$71c981f4f24093ab = (0, ($parcel$interopDefault($cctsW$emotionstyled))).a((props)=>$93284dbe5656196f$var$createStyles(props));
 const $93284dbe5656196f$export$353f5b6fc5456de1 = ({ label: label , size: size , icon: icon , children: children , className: className , href: href , ...rest })=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
-    const darkMode = mode(false, true);
     if (href) return (0, $cctsW$emotionreact.jsx)($93284dbe5656196f$export$71c981f4f24093ab, $93284dbe5656196f$var$_extends({
-        darkMode: darkMode,
         className: className,
         icon: icon,
         href: href
@@ -693,7 +621,6 @@ const $93284dbe5656196f$export$353f5b6fc5456de1 = ({ label: label , size: size ,
         icon: icon
     }), children || label);
     return (0, $cctsW$emotionreact.jsx)($93284dbe5656196f$export$1b8f8980778ed204, $93284dbe5656196f$var$_extends({
-        darkMode: darkMode,
         className: className,
         icon: icon
     }, rest), (0, $cctsW$emotionreact.jsx)((0, $a580f6540b6391c8$export$e1c22a2ee2645e36), {
@@ -707,7 +634,6 @@ const $93284dbe5656196f$export$353f5b6fc5456de1 = ({ label: label , size: size ,
         icon: icon
     }), children || label);
 };
-
 
 
 
@@ -745,7 +671,6 @@ const $9ef4ffc4c4beb9be$var$CTAWrapper = (0, ($parcel$interopDefault($cctsW$emot
         }
     ]);
 const $9ef4ffc4c4beb9be$var$Inset = (0, ($parcel$interopDefault($cctsW$emotionstyled))).div(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return [
         {
             "position": "absolute",
@@ -760,13 +685,14 @@ const $9ef4ffc4c4beb9be$var$Inset = (0, ($parcel$interopDefault($cctsW$emotionst
                 "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))"
             }
         },
-        mode({
+        {
             "--tw-bg-opacity": "1",
-            "backgroundColor": "rgba(241, 245, 249, var(--tw-bg-opacity))"
-        }, {
-            "--tw-bg-opacity": "1",
-            "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))"
-        })
+            "backgroundColor": "rgba(241, 245, 249, var(--tw-bg-opacity))",
+            "@media (prefers-color-scheme: dark)": {
+                "--tw-bg-opacity": "1",
+                "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))"
+            }
+        }
     ];
 });
 const $9ef4ffc4c4beb9be$export$887967f05dc521ae = ({ header: header , title: title , leader: leader , follower: follower , image: image , imageAlt: imageAlt , primaryCTA: primaryCTA , secondaryCTA: secondaryCTA  })=>{
@@ -942,9 +868,7 @@ var $f8a64a19359de842$exports = {};
 $parcel$export($f8a64a19359de842$exports, "Stake", function () { return $f8a64a19359de842$export$a348d077a2f485ad; });
 
 
-
 const $f8a64a19359de842$var$Section = (0, ($parcel$interopDefault($cctsW$emotionstyled))).section(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return [
         {
             "width": "100%",
@@ -960,7 +884,7 @@ const $f8a64a19359de842$var$Section = (0, ($parcel$interopDefault($cctsW$emotion
                 "paddingBottom": "3rem"
             }
         },
-        mode({
+        {
             "--tw-bg-opacity": "1",
             "backgroundColor": "rgba(241, 245, 249, var(--tw-bg-opacity))",
             "@media (prefers-color-scheme: dark)": {
@@ -971,16 +895,10 @@ const $f8a64a19359de842$var$Section = (0, ($parcel$interopDefault($cctsW$emotion
             },
             "--tw-text-opacity": "1",
             "color": "rgba(15, 23, 42, var(--tw-text-opacity))"
-        }, {
-            "--tw-bg-opacity": "1",
-            "backgroundColor": "rgba(30, 41, 59, var(--tw-bg-opacity))",
-            "--tw-text-opacity": "1",
-            "color": "rgba(226, 232, 240, var(--tw-text-opacity))"
-        })
+        }
     ];
 });
 const $f8a64a19359de842$var$Subtitle = (0, ($parcel$interopDefault($cctsW$emotionstyled))).section(()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return [
         {
             "display": "block",
@@ -991,17 +909,14 @@ const $f8a64a19359de842$var$Subtitle = (0, ($parcel$interopDefault($cctsW$emotio
             "marginBottom": "1.25rem",
             "padding": "0px"
         },
-        mode({
+        {
             "--tw-text-opacity": "1",
             "color": "rgba(51, 65, 85, var(--tw-text-opacity))",
             "@media (prefers-color-scheme: dark)": {
                 "--tw-text-opacity": "1",
                 "color": "rgba(148, 163, 184, var(--tw-text-opacity))"
             }
-        }, {
-            "--tw-text-opacity": "1",
-            "color": "rgba(148, 163, 184, var(--tw-text-opacity))"
-        })
+        }
     ];
 });
 const $f8a64a19359de842$export$a348d077a2f485ad = ({ title: title , subtitle: subtitle , image: image , imageAlt: imageAlt  })=>{
@@ -1245,7 +1160,6 @@ $parcel$export($69ab516b81419e01$exports, "Navbar", function () { return $69ab51
 
 
 
-
 const $69ab516b81419e01$var$NavbarLinkElement = (0, ($parcel$interopDefault($cctsW$emotionstyled))).a(({ current: current , darkBackground: darkBackground  })=>[
         {
             "display": "inline-flex",
@@ -1299,7 +1213,6 @@ const $69ab516b81419e01$var$NavWrapper = (0, ($parcel$interopDefault($cctsW$emot
         transparent ? "" : "bg-white shadow"
     ]);
 const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackground , transparent: transparent , links: links  })=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
     return (0, $cctsW$emotionreact.jsx)($69ab516b81419e01$var$NavWrapper, {
         transparent: transparent
     }, (0, $cctsW$emotionreact.jsx)((0, $cctsW$headlessuireact.Disclosure), {
@@ -1335,7 +1248,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
         }, (0, $cctsW$emotionreact.jsx)("a", {
             href: "/"
         }, (0, $cctsW$emotionreact.jsx)((0, $0c03e1166409509c$export$361608d1d463a8e6), {
-            darkBackground: mode(darkBackground, true),
+            darkBackground: darkBackground,
             css: {
                 "display": "block",
                 "height": "2rem",
@@ -1345,7 +1258,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                 }
             }
         }), (0, $cctsW$emotionreact.jsx)((0, $0c03e1166409509c$export$e6ff31bff12b7ff4), {
-            darkBackground: mode(darkBackground, true),
+            darkBackground: darkBackground,
             css: {
                 "display": "none",
                 "height": "2rem",
@@ -1373,7 +1286,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
             return (0, $cctsW$emotionreact.jsx)($69ab516b81419e01$var$NavbarLinkElement, {
                 key: label,
                 current: current,
-                darkBackground: mode(darkBackground, true),
+                darkBackground: darkBackground,
                 href: href
             }, label);
         })), (0, $cctsW$emotionreact.jsx)("div", {
@@ -1525,13 +1438,61 @@ $parcel$exportWildcard($3df0df3d189b4cd7$exports, $273a5b437f075cc2$exports);
 
 
 var $7f7087a5706a5061$exports = {};
+var $617b8c312431cf4f$exports = {};
+
+$parcel$export($617b8c312431cf4f$exports, "Theme", function () { return $617b8c312431cf4f$export$14faa19a0f3bbeb2; });
+$parcel$export($617b8c312431cf4f$exports, "ThemeProvider", function () { return $617b8c312431cf4f$export$d8964aec282183a3; });
+
+
+const $617b8c312431cf4f$var$initialUIMode = "os";
+const $617b8c312431cf4f$var$defaultOverride = ()=>$617b8c312431cf4f$var$initialUIMode;
+const $617b8c312431cf4f$var$defaultReset = ()=>$617b8c312431cf4f$var$initialUIMode;
+const $617b8c312431cf4f$export$14faa19a0f3bbeb2 = /*#__PURE__*/ (0, $cctsW$react.createContext)({
+    mode: "os",
+    colorScheme: "lime",
+    resolvedMode: "light",
+    overrideMode: $617b8c312431cf4f$var$defaultOverride,
+    resetMode: $617b8c312431cf4f$var$defaultReset
+});
+const $617b8c312431cf4f$var$resolveMode = ()=>{
+    if (typeof window === "undefined") return "light";
+    return localStorage.theme === "dark" || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+};
+const $617b8c312431cf4f$export$d8964aec282183a3 = ({ children: children , colorScheme: colorScheme  })=>{
+    const [modeState, dispatch] = (0, $cctsW$react.useState)($617b8c312431cf4f$var$resolveMode());
+    (0, $cctsW$react.useEffect)(()=>{
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", ()=>{
+            updateMode();
+        });
+    });
+    const overrideMode = (mode)=>{
+        dispatch(mode);
+        mode === "os" ? resetMode() : localStorage.theme = mode;
+        updateMode();
+    };
+    const resetMode = ()=>{
+        dispatch("os");
+        localStorage.removeItem("theme");
+        updateMode();
+    };
+    const updateMode = ()=>{
+        const currentMode = $617b8c312431cf4f$var$resolveMode();
+        dispatch(currentMode);
+        currentMode === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+    };
+    return (0, $cctsW$emotionreact.jsx)($617b8c312431cf4f$export$14faa19a0f3bbeb2.Provider, {
+        value: {
+            mode: modeState,
+            colorScheme: colorScheme || "lime",
+            resolvedMode: $617b8c312431cf4f$var$resolveMode(),
+            overrideMode: overrideMode,
+            resetMode: resetMode
+        }
+    }, children);
+};
+
 
 $parcel$exportWildcard($7f7087a5706a5061$exports, $617b8c312431cf4f$exports);
-
-
-var $74af65909ac25adb$exports = {};
-
-$parcel$exportWildcard($74af65909ac25adb$exports, $2623a1d7bc228148$exports);
 
 
 var $d218e1e9a5c18533$exports = {};
@@ -1553,7 +1514,6 @@ $parcel$exportWildcard($d218e1e9a5c18533$exports, $640afdabb51e8f92$exports);
 var $bc440fa7e3346d2d$exports = {};
 
 $parcel$export($bc440fa7e3346d2d$exports, "GlobalStyles", function () { return $bc440fa7e3346d2d$export$c507fb1c2e1ac13a; });
-
 
 
 
@@ -1805,11 +1765,7 @@ const $bc440fa7e3346d2d$var$BODY = (0, ($parcel$interopDefault($cctsW$emotionsty
             "color": "rgba(15, 23, 42, var(--tw-text-opacity))"
         }
     ]);
-const $bc440fa7e3346d2d$export$c507fb1c2e1ac13a = ()=>{
-    const mode = (0, $2623a1d7bc228148$export$b06374babe9615a7)();
-    return (0, $cctsW$emotionreact.jsx)((0, ($parcel$interopDefault($cctsW$react))).Fragment, null, (0, $cctsW$emotionreact.jsx)((0, $cctsW$reacthelmet.Helmet), null, (0, $cctsW$emotionreact.jsx)($bc440fa7e3346d2d$var$HTML, {
-        dark: mode(false, true)
-    }), (0, $cctsW$emotionreact.jsx)("link", {
+const $bc440fa7e3346d2d$export$c507fb1c2e1ac13a = ()=>(0, $cctsW$emotionreact.jsx)((0, ($parcel$interopDefault($cctsW$react))).Fragment, null, (0, $cctsW$emotionreact.jsx)((0, $cctsW$reacthelmet.Helmet), null, (0, $cctsW$emotionreact.jsx)("link", {
         rel: "preconnect",
         href: "https://fonts.googleapis.com"
     }), (0, $cctsW$emotionreact.jsx)("link", {
@@ -1819,19 +1775,14 @@ const $bc440fa7e3346d2d$export$c507fb1c2e1ac13a = ()=>{
     }), (0, $cctsW$emotionreact.jsx)("link", {
         href: "https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&family=Montserrat&family=Permanent+Marker&display=swap",
         rel: "stylesheet"
-    }), (0, $cctsW$emotionreact.jsx)($bc440fa7e3346d2d$var$BODY, {
-        dark: mode(false, true)
     })), (0, $cctsW$emotionreact.jsx)($bc440fa7e3346d2d$var$_GlobalStyles, null), (0, $cctsW$emotionreact.jsx)((0, $cctsW$emotionreact.Global), {
         styles: $bc440fa7e3346d2d$var$customStyles
     }));
-};
-
 
 
 
 $parcel$exportWildcard(module.exports, $3df0df3d189b4cd7$exports);
 $parcel$exportWildcard(module.exports, $7f7087a5706a5061$exports);
-$parcel$exportWildcard(module.exports, $74af65909ac25adb$exports);
 $parcel$exportWildcard(module.exports, $d218e1e9a5c18533$exports);
 $parcel$exportWildcard(module.exports, $bc440fa7e3346d2d$exports);
 

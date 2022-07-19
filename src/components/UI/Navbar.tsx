@@ -3,7 +3,6 @@ import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import tw, { styled } from "twin.macro";
 import { Logo, HLogoPre } from "../Branding/Logo";
-import { useMode } from "../../hooks/useMode";
 
 type NavbarLink = {
   href: string;
@@ -49,7 +48,6 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
   transparent,
   links,
 }) => {
-  const mode = useMode();
   return (
     <NavWrapper {...{ transparent }}>
       <Disclosure as="nav">
@@ -60,11 +58,11 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                 <div tw="flex-shrink-0 flex items-center">
                   <a href="/">
                     <HLogoPre
-                      darkBackground={mode(darkBackground, true)}
+                      darkBackground={darkBackground}
                       tw="block lg:hidden h-8 w-auto"
                     />
                     <Logo
-                      darkBackground={mode(darkBackground, true)}
+                      darkBackground={darkBackground}
                       tw="hidden lg:block h-8 w-auto"
                     />
                   </a>
@@ -81,7 +79,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
                         key={label}
                         {...{
                           current,
-                          darkBackground: mode(darkBackground, true),
+                          darkBackground,
                           href,
                         }}
                       >

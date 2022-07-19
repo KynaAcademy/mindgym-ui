@@ -1,5 +1,4 @@
 import { FunctionComponent, ReactNode } from "react";
-import { useMode } from "../../hooks/useMode";
 import tw, { styled } from "twin.macro";
 
 type BullitType = "numbers" | "checks" | ReactNode;
@@ -33,10 +32,9 @@ const Bullit: FunctionComponent<BullitProps> = ({ type, num }) => {
 };
 
 const Section = styled.section(() => {
-  const mode = useMode();
   return [
     tw`p-0 m-0 text-slate-900 dark:text-slate-200`,
-    mode(tw`text-slate-900`, tw`text-slate-200`),
+    tw`text-slate-900 dark:text-slate-200`,
   ];
 });
 

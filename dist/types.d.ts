@@ -1,20 +1,4 @@
-import React, { ReactNode, FunctionComponent, AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
-export type ThemeProviderProps = {
-    colorScheme?: any;
-    children: ReactNode;
-};
-type UIMode = "light" | "dark" | "os";
-export type ThemeContext = {
-    mode: UIMode;
-    colorScheme: any;
-    resolvedMode: "light" | "dark";
-    overrideMode: (mode: UIMode) => void;
-    resetMode: () => void;
-};
-export const Theme: React.Context<ThemeContext>;
-export const ThemeProvider: ({ children, colorScheme, }: ThemeProviderProps) => import("@emotion/react/jsx-runtime").JSX.Element;
-export type ModeResolveFunction = <L, D>(light: L, dark: D) => L | D;
-export function useMode(): ModeResolveFunction;
+import React, { FunctionComponent, ReactNode, AnchorHTMLAttributes, ButtonHTMLAttributes, ReactElement } from "react";
 type SVGProps = {
     mono?: boolean;
     className?: string;
@@ -44,7 +28,6 @@ type SharedButtonProps = {
     icon?: ReactElement;
     children?: ReactNode;
     size?: ButtonSize;
-    darkMode?: boolean;
 };
 type ButtonPropsForButtonElement = {
     href?: never;
@@ -112,6 +95,20 @@ export type NavbarProps = {
     transparent?: boolean;
 };
 export const Navbar: FunctionComponent<NavbarProps>;
+export type ThemeProviderProps = {
+    colorScheme?: any;
+    children: ReactNode;
+};
+type UIMode = "light" | "dark" | "os";
+export type ThemeContext = {
+    mode: UIMode;
+    colorScheme: any;
+    resolvedMode: "light" | "dark";
+    overrideMode: (mode: UIMode) => void;
+    resetMode: () => void;
+};
+export const Theme: React.Context<ThemeContext>;
+export const ThemeProvider: ({ children, colorScheme, }: ThemeProviderProps) => import("@emotion/react/jsx-runtime").JSX.Element;
 export const GlobalStyles: () => import("@emotion/react/jsx-runtime").JSX.Element;
 
 //# sourceMappingURL=types.d.ts.map

@@ -1,7 +1,6 @@
 import React, { FunctionComponent, ReactNode } from "react";
 import { Button } from "../UI/Button";
 import tw, { styled } from "twin.macro";
-import { useMode } from "../../hooks/useMode";
 
 export type HeroProps = {
   title: string;
@@ -28,11 +27,9 @@ const CTAWrapper = styled.div<CTAWrapperProps>(({ grid }) => [
 ]);
 
 const Inset = styled.div(() => {
-  const mode = useMode();
-
   return [
     tw`absolute inset-x-0 bottom-0 h-1/2 bg-slate-100 dark:bg-slate-800`,
-    mode(tw`bg-slate-100`, tw`bg-slate-800`),
+    tw`bg-slate-100 dark:bg-slate-800`,
   ];
 });
 
