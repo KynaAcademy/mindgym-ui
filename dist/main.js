@@ -372,7 +372,7 @@ const $20d73dc79c4db28e$var$Bullit = ({ type: type , num: num  })=>{
                     "display": "flex",
                     "borderRadius": "9999px",
                     "--tw-bg-opacity": "1",
-                    "backgroundColor": "rgba(255, 0, 99, var(--tw-bg-opacity))",
+                    "backgroundColor": "rgba(219, 39, 119, var(--tw-bg-opacity))",
                     "--tw-text-opacity": "1",
                     "color": "rgba(255, 255, 255, var(--tw-text-opacity))",
                     "padding": "1rem",
@@ -1065,10 +1065,10 @@ const $a294b0413d8ea55a$export$841a3b647f218b89 = (0, ($parcel$interopDefault($c
         },
         primary ? {
             "--tw-text-opacity": "1",
-            "color": "rgba(196, 243, 12, var(--tw-text-opacity))"
+            "color": "rgba(101, 163, 13, var(--tw-text-opacity))"
         } : {
             "--tw-text-opacity": "1",
-            "color": "rgba(255, 0, 99, var(--tw-text-opacity))"
+            "color": "rgba(219, 39, 119, var(--tw-text-opacity))"
         }
     ]);
 $a294b0413d8ea55a$export$841a3b647f218b89.displayName = "Conclusion";
@@ -1256,8 +1256,9 @@ const $69ab516b81419e01$var$NavbarLinkElement = (0, ($parcel$interopDefault($cct
             "borderBottomWidth": "2px",
             "fontSize": "0.875rem",
             "lineHeight": "1.25rem",
-            "fontWeight": "500",
-            "textTransform": "uppercase"
+            "fontWeight": "700",
+            "textTransform": "uppercase",
+            "letterSpacing": "0.1em"
         },
         current && darkBackground && {
             "--tw-border-opacity": "1",
@@ -1331,6 +1332,8 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                 "display": "flex",
                 "alignItems": "center"
             }
+        }, (0, $cctsW$emotionreact.jsx)("a", {
+            href: "/"
         }, (0, $cctsW$emotionreact.jsx)((0, $0c03e1166409509c$export$361608d1d463a8e6), {
             darkBackground: mode(darkBackground, true),
             css: {
@@ -1351,7 +1354,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "display": "block"
                 }
             }
-        })), (0, $cctsW$emotionreact.jsx)("div", {
+        }))), (0, $cctsW$emotionreact.jsx)("div", {
             css: {
                 "display": "none",
                 "justifyContent": "flex-end",
@@ -1405,7 +1408,7 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "boxShadow": "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
                     "--tw-ring-inset": "inset",
                     "--tw-ring-opacity": "1",
-                    "--tw-ring-color": "rgba(196, 243, 12, var(--tw-ring-opacity))"
+                    "--tw-ring-color": "rgba(232, 250, 158, var(--tw-ring-opacity))"
                 }
             }
         }, (0, $cctsW$emotionreact.jsx)("span", {
@@ -1460,12 +1463,12 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "--tw-bg-opacity": "1",
                     "backgroundColor": "rgba(232, 250, 158, var(--tw-bg-opacity))",
                     "--tw-border-opacity": "1",
-                    "borderColor": "rgba(196, 243, 12, var(--tw-border-opacity))",
+                    "borderColor": "rgba(232, 250, 158, var(--tw-border-opacity))",
                     "--tw-text-opacity": "1",
                     "color": "rgba(31, 41, 55, var(--tw-text-opacity))",
                     ":hover": {
                         "--tw-bg-opacity": "1",
-                        "backgroundColor": "rgba(236, 252, 203, var(--tw-bg-opacity))"
+                        "backgroundColor": "rgba(196, 243, 12, var(--tw-bg-opacity))"
                     },
                     "display": "block",
                     "paddingLeft": "0.75rem",
@@ -1487,11 +1490,11 @@ const $69ab516b81419e01$export$42cfbb80f7861e77 = ({ darkBackground: darkBackgro
                     "color": "rgba(107, 114, 128, var(--tw-text-opacity))",
                     ":hover": {
                         "--tw-bg-opacity": "1",
-                        "backgroundColor": "rgba(249, 250, 251, var(--tw-bg-opacity))",
+                        "backgroundColor": "rgba(220, 228, 238, var(--tw-bg-opacity))",
                         "--tw-border-opacity": "1",
-                        "borderColor": "rgba(209, 213, 219, var(--tw-border-opacity))",
+                        "borderColor": "rgba(164, 176, 205, var(--tw-border-opacity))",
                         "--tw-text-opacity": "1",
-                        "color": "rgba(55, 65, 81, var(--tw-text-opacity))"
+                        "color": "rgba(6, 3, 4, var(--tw-text-opacity))"
                     },
                     "display": "block",
                     "paddingLeft": "0.75rem",
