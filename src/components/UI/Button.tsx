@@ -18,6 +18,7 @@ type SharedButtonProps = {
   icon?: ReactElement;
   children?: ReactNode;
   size?: ButtonSize;
+  textOnly?: boolean;
 };
 
 type ButtonPropsForButtonElement = { href?: never } & SharedButtonProps &
@@ -35,6 +36,7 @@ const createStyles = ({
   primary,
   secondary,
   tertiary,
+  textOnly,
 }: SharedButtonProps) => [
   tw`inline-flex items-center border border-transparent rounded-md hover:shadow-sm font-bold uppercase tracking-wide`,
   !size && tw`text-sm px-8 py-3`,
@@ -50,6 +52,7 @@ const createStyles = ({
     tw`text-white hover:text-mg-slate bg-mg-secondary hover:bg-mg-secondary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-secondary`,
   primary &&
     tw`bg-mg-primary hover:bg-mg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-primary`,
+  !!textOnly && tw`border-0 `,
 ];
 
 export const AsButton = styled.button((props: SharedButtonProps) =>
