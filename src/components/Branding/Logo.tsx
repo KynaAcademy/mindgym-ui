@@ -43,21 +43,21 @@ export const DefaultLogo: FunctionComponent<SVGProps> = ({
         cy="114.12"
         r="99.25"
         transform="translate(-65.3 108.09) rotate(-45)"
-        style={{ fill: mono ? "currentcolor" : "#e61a1a" }}
+        style={{ fill: mono ? "currentcolor" : "#0C5DF2" }}
       />
       <circle
         cx="373.8"
         cy="130.66"
         r="99.25"
         transform="translate(-4.59 287.72) rotate(-45)"
-        style={{ fill: mono ? "currentcolor" : "#e61a62" }}
+        style={{ fill: mono ? "currentcolor" : "#F20C5D" }}
       />
       <circle
         cx="912.12"
         cy="166.67"
         r="99.25"
         transform="translate(127.61 678.91) rotate(-45)"
-        style={{ fill: mono ? "currentcolor" : "#50d926" }}
+        style={{ fill: mono ? "currentcolor" : "#5DF20C" }}
       />
       <g style={{ isolation: "isolate" }}>
         <path
@@ -156,21 +156,21 @@ export const HLogo = ({ mono, darkBackground, ...props }: SVGProps) => {
         cx="53.01"
         cy="53.01"
         r="53.01"
-        style={{ fill: mono ? "currentcolor" : "#e61a1a" }}
+        style={{ fill: mono ? "currentcolor" : "#0C5DF2" }}
       />
       <circle
         cx="185.02"
         cy="61.84"
         r="53.01"
         style={{
-          fill: mono ? "currentcolor" : "#e61a62",
+          fill: mono ? "currentcolor" : "#F20C5D",
         }}
       />
       <circle
         cx="921.8"
         cy="81.07"
         r="53.01"
-        style={{ fill: mono ? "currentcolor" : "#50d926" }}
+        style={{ fill: mono ? "currentcolor" : "#5DF20C" }}
       />
       <g style={{ isolation: "isolate" }}>
         <path
@@ -271,7 +271,7 @@ export const HLogoPre = ({ mono, darkBackground, ...props }: SVGProps) => {
         r="47.89"
         transform="translate(-143.95 209.41) rotate(-80.52)"
         style={{
-          fill: mono ? "currentcolor" : "#e61a1a",
+          fill: mono ? "currentcolor" : "#0C5DF2",
         }}
       />
       <circle
@@ -279,14 +279,14 @@ export const HLogoPre = ({ mono, darkBackground, ...props }: SVGProps) => {
         cy="191.11"
         r="47.89"
         transform="translate(-52.19 333.72) rotate(-80.52)"
-        style={{ fill: mono ? "currentcolor" : "#e61a62" }}
+        style={{ fill: mono ? "currentcolor" : "#F20C5D" }}
       />
       <circle
         cx="172.5"
         cy="58.6"
         r="47.89"
         transform="translate(66.1 208.39) rotate(-80.52)"
-        style={{ fill: mono ? "currentcolor" : "#50d926" }}
+        style={{ fill: mono ? "currentcolor" : "#5DF20C" }}
       />
       <g style={{ isolation: "isolate" }}>
         <path
@@ -379,21 +379,21 @@ export const LogoDots = ({ mono, ...props }: SVGProps) => {
         cy="765.73"
         r="208.52"
         transform="translate(-511.36 387.7) rotate(-45)"
-        style={{ fill: mono ? "currentcolor" : "#e61a1a" }}
+        style={{ fill: mono ? "currentcolor" : "#0C5DF2" }}
       />
       <circle
         cx="771.66"
         cy="800.47"
         r="208.52"
         transform="translate(-383.82 765.09) rotate(-45)"
-        style={{ fill: mono ? "currentcolor" : "#e61a62" }}
+        style={{ fill: mono ? "currentcolor" : "#F20C5D" }}
       />
       <circle
         cx="706.98"
         cy="223.53"
         r="208.52"
         transform="translate(5.2 550.37) rotate(-45)"
-        style={{ fill: mono ? "currentcolor" : "#50d926" }}
+        style={{ fill: mono ? "currentcolor" : "#5DF20C" }}
       />
     </svg>
   );

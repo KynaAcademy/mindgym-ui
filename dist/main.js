@@ -139,7 +139,7 @@ const $0c03e1166409509c$export$523e896ec86fba5b = ({ mono: mono , darkBackground
         r: "99.25",
         transform: "translate(-65.3 108.09) rotate(-45)",
         style: {
-            fill: mono ? "currentcolor" : "#e61a1a"
+            fill: mono ? "currentcolor" : "#0C5DF2"
         }
     }), (0, $cctsW$emotionreact.jsx)("circle", {
         cx: "373.8",
@@ -205,7 +205,7 @@ const $0c03e1166409509c$export$ec975bafc9ee5d87 = ({ mono: mono , darkBackground
         cy: "53.01",
         r: "53.01",
         style: {
-            fill: mono ? "currentcolor" : "#e61a1a"
+            fill: mono ? "currentcolor" : "#0C5DF2"
         }
     }), (0, $cctsW$emotionreact.jsx)("circle", {
         cx: "185.02",
@@ -270,7 +270,7 @@ const $0c03e1166409509c$export$361608d1d463a8e6 = ({ mono: mono , darkBackground
         r: "47.89",
         transform: "translate(-143.95 209.41) rotate(-80.52)",
         style: {
-            fill: mono ? "currentcolor" : "#e61a1a"
+            fill: mono ? "currentcolor" : "#0C5DF2"
         }
     }), (0, $cctsW$emotionreact.jsx)("circle", {
         cx: "187.36",
@@ -332,7 +332,7 @@ const $0c03e1166409509c$export$fd27702a64f1a709 = ({ mono: mono , ...props })=>{
         r: "208.52",
         transform: "translate(-511.36 387.7) rotate(-45)",
         style: {
-            fill: mono ? "currentcolor" : "#e61a1a"
+            fill: mono ? "currentcolor" : "#0C5DF2"
         }
     }), (0, $cctsW$emotionreact.jsx)("circle", {
         cx: "771.66",
