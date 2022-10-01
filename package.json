@@ -1,11 +1,12 @@
 {
   "name": "@kyna/ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
   "author": "Mindgym Academy <support@kynaacademy.com>",
   "license": "MIT",
+  "private": false,
   "scripts": {
     "start": "parcel",
     "build": "rm -rf dist && parcel build",
