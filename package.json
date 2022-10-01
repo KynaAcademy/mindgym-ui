@@ -1,10 +1,10 @@
 {
-  "name": "@mindgym/ui",
-  "version": "1.0.6",
+  "name": "@kyna/ui",
+  "version": "1.0.0",
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
-  "author": "Mindgym Academy <support@mindgymacademy.com>",
+  "author": "Mindgym Academy <support@kynaacademy.com>",
   "license": "MIT",
   "scripts": {
     "start": "parcel",

@@ -1,6 +1,8 @@
-import React from "react";
+import "twin.macro";
+
 import { ComponentMeta } from "@storybook/react";
 import { Logo } from "./Logo";
+import React from "react";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

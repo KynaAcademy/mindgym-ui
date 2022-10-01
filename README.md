@@ -1,15 +1,15 @@
-# Mindgym UI
+# Kyna UI
 
-This is the Mindgym UI library featuring the components and themes we use.
+This is the Kyna UI library featuring the components and themes we use.
 
 ## Usage
 
 ```shell
-$ yarn add @mindgym/ui
+$ yarn add @kyna/ui
 ```
 
 ```tsx
-import { Button } from "@mindgym/ui";
+import { Button } from "@kyna/ui";
 
 export function App() {
   <div>

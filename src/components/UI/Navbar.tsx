@@ -1,8 +1,9 @@
-import React, { FunctionComponent } from "react";
-import { Disclosure } from "@headlessui/react";
+import { KLogo, Logo } from "../Branding/Logo";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import React, { FunctionComponent } from "react";
 import tw, { styled } from "twin.macro";
-import { Logo, HLogoPre } from "../Branding/Logo";
+
+import { Disclosure } from "@headlessui/react";
 import { useMode } from "../../hooks/useMode";
 
 type NavbarLink = {
@@ -57,16 +58,17 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
           <>
             <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div tw="flex justify-between h-16">
-                <div tw="flex-shrink-0 flex items-center">
+                <div
+                  tw="flex-shrink-0 flex items-center"
+                  css={[darkBackground && tw`text-mg-light`]}
+                >
                   <a href="/">
-                    <HLogoPre
-                      darkBackground={mode(darkBackground, true)}
-                      tw="block lg:hidden h-8 w-auto"
-                    />
                     <Logo
-                      darkBackground={mode(darkBackground, true)}
-                      tw="hidden lg:block h-8 w-auto"
+                      variant="dots"
+                      mono={darkBackground}
+                      tw="block lg:hidden h-8"
                     />
+                    <Logo variant="default" mono tw="hidden lg:block h-8" />
                   </a>
                 </div>
                 <div tw="hidden sm:ml-6 sm:flex sm:space-x-8 justify-end">
