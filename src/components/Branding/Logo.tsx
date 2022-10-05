@@ -51,12 +51,12 @@ export const KLogo: FunctionComponent<SVGProps> = ({ mono, ...props }) => {
           y2="582.64"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#4777ff" />
-          <stop offset=".12" stop-color="#7e64d7" />
-          <stop offset=".33" stop-color="#da4494" />
-          <stop offset=".42" stop-color="#ff387a" />
-          <stop offset=".81" stop-color="#ffd503" />
-          <stop offset="1" stop-color="#00db00" />
+          <stop offset="0" stopColor="#4777ff" />
+          <stop offset=".12" stopColor="#7e64d7" />
+          <stop offset=".33" stopColor="#da4494" />
+          <stop offset=".42" stopColor="#ff387a" />
+          <stop offset=".81" stopColor="#ffd503" />
+          <stop offset="1" stopColor="#00db00" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-2"
@@ -171,12 +171,12 @@ export const DefaultLogo: FunctionComponent<SVGProps> = ({
           y2="157.11"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#4777ff" />
-          <stop offset=".12" stop-color="#7e64d7" />
-          <stop offset=".33" stop-color="#da4494" />
-          <stop offset=".42" stop-color="#ff387a" />
-          <stop offset=".81" stop-color="#ffd503" />
-          <stop offset="1" stop-color="#00db00" />
+          <stop offset="0" stopColor="#4777ff" />
+          <stop offset=".12" stopColor="#7e64d7" />
+          <stop offset=".33" stopColor="#da4494" />
+          <stop offset=".42" stopColor="#ff387a" />
+          <stop offset=".81" stopColor="#ffd503" />
+          <stop offset="1" stopColor="#00db00" />
         </linearGradient>
         <linearGradient
           id="linear-gradient-2"
