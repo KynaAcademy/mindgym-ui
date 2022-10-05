@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.1.0...v2.1.0) (2022-10-05)
+
+
+### Bug Fixes
+
+* Bump release version manually ([340ee63](https://github.com/MindgymAcademy/mindgym-ui/commit/340ee63e692e79aaa064c0cf5da757a360e689ec))
+
 ## [1.1.0](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.0.6...v1.1.0) (2022-10-05)
 
 
