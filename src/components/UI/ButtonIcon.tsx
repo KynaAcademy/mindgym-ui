@@ -1,4 +1,5 @@
 import React, { FC, ReactElement } from "react";
+
 import { ButtonSize } from "./Button";
 
 interface Props {
@@ -9,5 +10,5 @@ interface Props {
 
 export const ButtonIcon: FC<Props> = ({ icon, ...props }) => {
   if (!icon) return null;
-  return React.cloneElement(icon, { ...props, ariaHidden: true }, null);
+  return React.cloneElement(icon, { ...props, "aria-hidden": true }, null);
 };
