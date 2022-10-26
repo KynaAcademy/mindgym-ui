@@ -32,7 +32,7 @@
     "@parcel/transformer-svg-react": "^2.6.0",
     "@parcel/transformer-typescript-types": "^2.6.2",
     "@storybook/addon-actions": "^6.5.9",
-    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.13",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
     "@storybook/addons": "^6.5.9",
