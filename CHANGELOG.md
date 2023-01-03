@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/MindgymAcademy/mindgym-ui/compare/v2.1.0...v2.1.1) (2023-01-03)
+
+
+### Bug Fixes
+
+* **Navbar:** Logo issues ([433b423](https://github.com/MindgymAcademy/mindgym-ui/commit/433b4234e4d788faa01bafd9b01fbb1cd0997bcf))
+
 ## [2.1.0](https://github.com/MindgymAcademy/mindgym-ui/compare/v1.1.0...v2.1.0) (2022-10-05)
 
 
