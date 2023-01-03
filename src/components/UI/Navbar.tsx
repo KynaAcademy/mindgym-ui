@@ -42,7 +42,7 @@ const NavbarLinkElement = styled.a(
 );
 
 const NavWrapper = styled.div<NavWrapperProps>(({ transparent }) => [
-  transparent ? "" : "bg-white shadow",
+  transparent ? "" : tw`bg-white dark:bg-mg-onyx shadow`,
 ]);
 
 export const Navbar: FunctionComponent<NavbarProps> = ({
@@ -59,16 +59,11 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
             <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div tw="flex justify-between h-16">
                 <div
-                  tw="flex-shrink-0 flex items-center"
+                  tw="flex items-center"
                   css={[darkBackground && tw`text-mg-light`]}
                 >
                   <a href="/">
-                    <Logo
-                      variant="dots"
-                      mono={darkBackground}
-                      tw="block lg:hidden h-8"
-                    />
-                    <Logo variant="default" mono tw="hidden lg:block h-8" />
+                    <Logo variant="dots" mono={darkBackground} tw="block h-8" />
                   </a>
                 </div>
                 <div tw="hidden sm:ml-6 sm:flex sm:space-x-8 justify-end">

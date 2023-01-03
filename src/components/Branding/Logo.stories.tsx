@@ -21,7 +21,7 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => (
-  <div tw="w-96">
+  <div tw="w-96 dark:text-white">
     <Logo {...args} />
   </div>
 );
