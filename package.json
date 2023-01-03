@@ -4,7 +4,10 @@
   "source": "src/index.ts",
   "main": "dist/main.js",
   "types": "dist/types.d.ts",
-  "author": "Mindgym Academy <support@kynaacademy.com>",
+  "author": {
+    "name": "Mindgym Academy",
+    "email": "support@kynaacademy.com"
+  },
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -13,7 +16,8 @@
     "check": "tsc --noEmit",
     "test": "test-storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -68,5 +72,7 @@
     "twin": {
       "preset": "emotion"
     }
-  }
+  },
+  "readme": "./README.md",
+  "_id": "@kyna/ui@2.1.0"
 }
