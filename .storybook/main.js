@@ -6,6 +6,14 @@ module.exports = {
     "@storybook/addon-interactions",
     "storybook-addon-designs",
     "storybook-dark-mode",
+    {
+      name: "@storybook/addon-postcss",
+      options: {
+        postcssLoaderOptions: {
+          implementation: require("postcss"),
+        },
+      },
+    },
   ],
   framework: "@storybook/react",
 };
