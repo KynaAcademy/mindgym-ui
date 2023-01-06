@@ -1,5 +1,3 @@
-import "twin.macro";
-
 import { ComponentMeta } from "@storybook/react";
 import { Logo } from "./Logo";
 import React from "react";
@@ -21,7 +19,7 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => (
-  <div tw="w-96">
+  <div className="w-96">
     <Logo {...args} />
   </div>
 );
