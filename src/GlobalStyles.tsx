@@ -1,7 +1,10 @@
-import React from "react";
+import "../styles/globals.css";
+
+import tw, { GlobalStyles as BaseStyles, css, styled, theme } from "twin.macro";
+
 import { Global } from "@emotion/react";
 import { Helmet } from "react-helmet";
-import tw, { css, styled, theme, GlobalStyles as BaseStyles } from "twin.macro";
+import React from "react";
 import { useMode } from "./hooks/useMode";
 
 const customStyles = css`
@@ -37,7 +40,6 @@ export const GlobalStyles = () => {
         />
         <BODY dark={mode(false, true)} />
       </Helmet>
-      <BaseStyles />
       <Global styles={customStyles} />
     </>
   );
