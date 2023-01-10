@@ -59,7 +59,7 @@ export const Navbar: FunctionComponent<NavbarProps> = ({
             <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div tw="flex justify-between h-16">
                 <div
-                  tw="flex-shrink-0 flex items-center"
+                  tw="shrink-0 flex items-center"
                   css={[darkBackground && tw`text-mg-light`]}
                 >
                   <a href="/">
