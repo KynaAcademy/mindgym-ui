@@ -82,11 +82,12 @@ export const Button: FC<ButtonProps> = ({
   if (href) {
     return (
       <ProtoButton
+        $as="a"
         darkMode={darkMode}
         className={className}
         icon={icon}
         href={href}
-        {...(rest as Partial<AnchorHTMLAttributes<HTMLAnchorElement>>)}
+        // {...(rest as Partial<AnchorHTMLAttributes<HTMLAnchorElement>>)}
       >
         <ButtonIcon tw="-ml-1 mr-2 h-5 w-5" size={size} icon={icon} />
         {children || label}
@@ -94,16 +95,15 @@ export const Button: FC<ButtonProps> = ({
     );
   }
   return (
-    // <AsButton
-    //   darkMode={darkMode}
-    //   className={className}
-    //   icon={icon}
-    //   {...(rest as Partial<ButtonHTMLAttributes<HTMLButtonElement>>)}
-    // >
-    //   <ButtonIcon tw="-ml-1 mr-2 h-5 w-5" size={size} icon={icon} />
-    //   {children || label}
-    // </AsButton>
-    null
+    <ProtoButton
+      darkMode={darkMode}
+      className={className}
+      icon={icon}
+      // {...(rest as Partial<ButtonHTMLAttributes<HTMLButtonElement>>)}
+    >
+      <ButtonIcon tw="-ml-1 mr-2 h-5 w-5" size={size} icon={icon} />
+      {children || label}
+    </ProtoButton>
   );
 };
 
@@ -118,20 +118,49 @@ font-bold
 uppercase
 tracking-wide
 
-${(p) => !p.size && "text-sm px-8 py-3"}
-${(p) => p.size === "large" && "px-8 py-3 sm:px-8 text-sm"}
-${(p) => p.size === "small" && "px-3 py-2 sm:px-4 text-xs"}
+${(p) =>
+  p.size === "large"
+    ? "px-8 py-3 sm:px-8 text-sm"
+    : p.size === "small"
+    ? "px-3 py-2 sm:px-4 text-xs"
+    : !p.size
+    ? "text-sm px-8 py-3"
+    : ""}
+
 ${(p) =>
   !p.primary && !p.secondary && !p.tertiary && p.darkMode
     ? "bg-slate-800 text-slate-200 border-slate-200 hover:bg-slate-900"
     : "text-slate-700 bg-transparent border-slate-700 hover:bg-slate-100"}
+  
 ${(p) =>
-  p.tertiary &&
-  "text-mg-subtle border-mg-subtle hover:border-mg-slate hover:text-mg-slate focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-subtle"}
+  p.tertiary
+    ? "text-mg-subtle border-mg-subtle hover:border-mg-slate hover:text-mg-slate focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-subtle"
+    : ""}
+    
 ${(p) =>
-  p.secondary &&
-  "text-white hover:text-mg-slate bg-mg-secondary hover:bg-mg-secondary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-secondary"}
+  p.secondary
+    ? "text-white hover:text-mg-slate bg-mg-secondary hover:bg-mg-secondary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-secondary"
+    : ""}
+  
 ${(p) =>
-  p.primary &&
-  "bg-mg-primary hover:bg-mg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-primary"}
+  p.primary
+    ? "bg-mg-primary hover:bg-mg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-mg-primary"
+    : ""}   
 `;
+
+// ${(p) => !p.size && "text-sm px-8 py-3"}
+
+// ${(p) =>
+//   (p.size === "large" && "px-8 py-3 sm:px-8 text-sm") ||
+//   (p.size === "small" && "px-3 py-2 sm:px-4 text-xs")}
+
+// ${({ size }) => {
+//   switch (size) {
+//     case "large":
+//       return "px-8 py-3 sm:px-8 text-sm";
+//     case "small":
+//       return "px-3 py-2 sm:px-4 text-xs";
+//     default:
+//       return "";
+//   }
+// }}
