@@ -4,7 +4,6 @@ import tw, { GlobalStyles as BaseStyles, css, styled, theme } from "twin.macro";
 
 import { Global } from "@emotion/react";
 import { Helmet } from "react-helmet";
-import React from "react";
 import { useMode } from "./hooks/useMode";
 
 const customStyles = css`
@@ -13,6 +12,7 @@ const customStyles = css`
     ${tw`antialiased`}
   }
 `;
+// todo - fix single prop types (primary !== boolean), see error message in console
 
 type HtmlProps = { dark: boolean };
 const HTML = styled.html<HtmlProps>(({ dark }) => [tw`h-full`, dark && "dark"]);
