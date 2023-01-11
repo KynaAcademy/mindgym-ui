@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import tw, { styled } from "twin.macro";
+import tw from "tailwind-styled-components";
 
 export enum TitleLevel {
   h1 = 1,
@@ -13,10 +13,10 @@ export type TitleProps = {
   children: React.ReactNode;
 };
 
-const H1 = styled.h1(() => [tw`text-5xl font-serif font-black mt-6 mb-2`]);
-const H2 = styled.h2(() => [tw`text-3xl font-serif font-black mt-6 mb-2`]);
-const H3 = styled.h3(() => [tw`text-xl font-serif font-black mt-6 mb-2`]);
-const H4 = styled.h4(() => [tw`text-lg font-serif font-bold mt-6 mb-2`]);
+const H1 = tw.h1`text-5xl font-serif font-black mt-6 mb-2`;
+const H2 = tw.h2`text-3xl font-serif font-black mt-6 mb-2`;
+const H3 = tw.h3`text-xl font-serif font-black mt-6 mb-2`;
+const H4 = tw.h4`text-lg font-serif font-bold mt-6 mb-2`;
 
 export const Title: FunctionComponent<TitleProps> = ({ level, children }) => {
   switch (level) {

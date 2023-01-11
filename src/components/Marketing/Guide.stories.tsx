@@ -1,7 +1,7 @@
-import React from "react";
-import { ComponentMeta } from "@storybook/react";
-import { Guide, GuideProps } from "./Guide";
 import { AcademicCapIcon } from "@heroicons/react/solid";
+import { ComponentMeta } from "@storybook/react";
+import { Guide } from "./Guide";
+import React from "react";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

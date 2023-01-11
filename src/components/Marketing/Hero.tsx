@@ -1,9 +1,7 @@
-import React, { FC, FunctionComponent, ReactNode } from "react";
+import { FC, Fragment, ReactNode } from "react";
 
 import { Button } from "../UI/Button";
 import tw from "tailwind-styled-components";
-// import tw, { styled } from "twin.macro";
-import { useMode } from "../../hooks/useMode";
 
 export type HeroProps = {
   title: string;
@@ -37,35 +35,39 @@ export const Hero: FC<HeroProps> = ({
   return (
     <HeroWrapper>
       <Inset />
-      <div tw="max-w-7xl mx-auto">
-        <div tw="relative sm:overflow-hidden">
-          <ImageWrapper>
-            {image && (
-              <>
-                <Image src={image} alt={imageAlt || "background image"} />
-                <ImageDiv />
-              </>
-            )}
-            {!image && <NoImageDiv />}
-          </ImageWrapper>
-          {header && <HeaderWrapper>{header}</HeaderWrapper>}
-          <LeaderWrapper>
-            <LeaderH1>
-              {leader && <LeaderSpan>{leader}</LeaderSpan>}
-              <TitleSpan>{title}</TitleSpan>
-            </LeaderH1>
-            {follower && <FollowerParagraph>{follower}</FollowerParagraph>}
-            <ButtonWrapper>
-              <CTAWrapper grid={!!secondaryCTA}>
-                <Button primary size="large" {...primaryCTA} />
-                {secondaryCTA && (
-                  <Button secondary size="large" {...secondaryCTA} />
-                )}
-              </CTAWrapper>
-            </ButtonWrapper>
-          </LeaderWrapper>
-        </div>
-      </div>
+      <ContentWrapper>
+        <ImageWrapper>
+          {image && (
+            <Fragment>
+              <Image src={image} alt={imageAlt || "background image"} />
+              <ImageDiv />
+            </Fragment>
+          )}
+          {!image && <NoImageDiv />}
+        </ImageWrapper>
+
+        {header && <HeaderWrapper>{header}</HeaderWrapper>}
+
+        <LeaderWrapper>
+          <LeaderH1>
+            {leader && <LeaderSpan>{leader}</LeaderSpan>}
+
+            <TitleSpan>{title}</TitleSpan>
+          </LeaderH1>
+
+          {follower && <FollowerParagraph>{follower}</FollowerParagraph>}
+
+          <ButtonWrapper>
+            <CTAWrapper grid={!!secondaryCTA}>
+              <Button primary size="large" {...primaryCTA} />
+
+              {secondaryCTA && (
+                <Button secondary size="large" {...secondaryCTA} />
+              )}
+            </CTAWrapper>
+          </ButtonWrapper>
+        </LeaderWrapper>
+      </ContentWrapper>
     </HeroWrapper>
   );
 };
@@ -74,7 +76,7 @@ const CTAWrapper = tw.div<CTAWrapperProps>`
 space-y-4
 
 ${(p) =>
-  p.grid && "sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5"}
+  p.grid && `sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5`}
 `;
 
 const HeroWrapper = tw.div`
@@ -88,6 +90,13 @@ bottom-0
 h-1/2
 bg-slate-100
 dark:bg-slate-800
+`;
+
+const ContentWrapper = tw.div`
+max-w-7xl
+mx-auto
+relative
+sm:overflow-hidden
 `;
 
 const ImageWrapper = tw.div`
