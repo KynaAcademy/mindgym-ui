@@ -24,6 +24,7 @@ type SharedButtonProps = {
   darkMode?: boolean;
   href?: string;
   $a?: any;
+  textOnly?: boolean;
 };
 
 type ButtonPropsForButtonElement = {
